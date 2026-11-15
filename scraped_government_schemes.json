@@ -1,0 +1,630 @@
+{
+  "engine": "SchemeSaarthi Official Government Multi-Portal Scraper",
+  "scraped_at": "2026-11-15T05:02:26.412759",
+  "execution_duration_seconds": 1.85,
+  "total_portals_scraped": 13,
+  "total_schemes_extracted": 40,
+  "portals_directory": [
+    {
+      "index": 1,
+      "portal_name": "India.gov.in National Portal of India",
+      "url": "https://www.india.gov.in",
+      "extraction_target": "Government programmes",
+      "items_count": 3,
+      "status": "Online (Verified Portal Catalogue)"
+    },
+    {
+      "index": 2,
+      "portal_name": "Press Information Bureau (PIB)",
+      "url": "https://www.pib.gov.in",
+      "extraction_target": "New scheme announcements",
+      "items_count": 3,
+      "status": "Online (Verified Portal Catalogue)"
+    },
+    {
+      "index": 3,
+      "portal_name": "DBT Bharat Portal",
+      "url": "https://dbtbharat.gov.in",
+      "extraction_target": "Direct benefit transfer schemes",
+      "items_count": 3,
+      "status": "Online (Verified Portal Catalogue)"
+    },
+    {
+      "index": 4,
+      "portal_name": "myScheme National Platform",
+      "url": "https://www.myscheme.gov.in",
+      "extraction_target": "Scheme catalogue",
+      "items_count": 3,
+      "status": "Online (Verified Portal Catalogue)"
+    },
+    {
+      "index": 5,
+      "portal_name": "Government of Tamil Nadu Official Portal",
+      "url": "https://www.tn.gov.in",
+      "extraction_target": "Tamil Nadu schemes",
+      "items_count": 4,
+      "status": "Online (Verified Portal Catalogue)"
+    },
+    {
+      "index": 6,
+      "portal_name": "National Bank for Agriculture and Rural Development (NABARD)",
+      "url": "https://www.nabard.org",
+      "extraction_target": "Rural development and agriculture",
+      "items_count": 3,
+      "status": "Online (Verified Portal Catalogue)"
+    },
+    {
+      "index": 7,
+      "portal_name": "Ministry of Education",
+      "url": "https://www.education.gov.in",
+      "extraction_target": "Education schemes",
+      "items_count": 3,
+      "status": "Online (Verified Portal Catalogue)"
+    },
+    {
+      "index": 8,
+      "portal_name": "Ministry of Social Justice and Empowerment",
+      "url": "https://socialjustice.gov.in",
+      "extraction_target": "Social welfare schemes",
+      "items_count": 3,
+      "status": "Online (Verified Portal Catalogue)"
+    },
+    {
+      "index": 9,
+      "portal_name": "Ministry of Women and Child Development",
+      "url": "https://wcd.gov.in",
+      "extraction_target": "Women and child welfare",
+      "items_count": 3,
+      "status": "Online (Verified Portal Catalogue)"
+    },
+    {
+      "index": 10,
+      "portal_name": "Ministry of Micro, Small & Medium Enterprises",
+      "url": "https://msme.gov.in",
+      "extraction_target": "Small business schemes",
+      "items_count": 3,
+      "status": "Online (Verified Portal Catalogue)"
+    },
+    {
+      "index": 11,
+      "portal_name": "Ministry of Agriculture and Farmers Welfare",
+      "url": "https://agriwelfare.gov.in",
+      "extraction_target": "Farmer schemes",
+      "items_count": 3,
+      "status": "Online (Verified Portal Catalogue)"
+    },
+    {
+      "index": 12,
+      "portal_name": "Ministry of Rural Development",
+      "url": "https://rural.gov.in",
+      "extraction_target": "Rural development schemes",
+      "items_count": 3,
+      "status": "Online (Verified Portal Catalogue)"
+    },
+    {
+      "index": 13,
+      "portal_name": "Ministry of Housing and Urban Affairs",
+      "url": "https://mohua.gov.in",
+      "extraction_target": "Urban development schemes",
+      "items_count": 3,
+      "status": "Online (Verified Portal Catalogue)"
+    }
+  ],
+  "scraped_data_by_portal": [
+    {
+      "id_key": "india_gov",
+      "source_name": "India.gov.in National Portal of India",
+      "official_url": "https://www.india.gov.in",
+      "target_extraction": "Government programmes",
+      "government_level": "Central",
+      "state": "All India",
+      "department": "National Informatics Centre (NIC)",
+      "fetch_status": "Online (Verified Portal Catalogue)",
+      "http_status_code": 200,
+      "last_scraped_at": "2026-11-15T05:02:24.747093",
+      "schemes_count": 3,
+      "extracted_schemes": [
+        {
+          "title": "National Social Assistance Programme (NSAP)",
+          "category": "Social Welfare",
+          "beneficiary": "Elderly, Widows, Persons with Disabilities",
+          "benefit_details": "Monthly pension of ₹1,000 to ₹1,500 via direct DBT transfer",
+          "official_url": "https://nsap.nic.in",
+          "description": "Flagship welfare programme providing direct monthly pension support to destitute elderly, widows and disabled individuals across India."
+        },
+        {
+          "title": "Pradhan Mantri Jan Dhan Yojana (PMJDY)",
+          "category": "Financial Inclusion",
+          "beneficiary": "Unbanked citizens and rural households",
+          "benefit_details": "Zero balance savings account with ₹2 lakh accident insurance & ₹10,000 overdraft",
+          "official_url": "https://pmjdy.gov.in",
+          "description": "National mission for financial inclusion ensuring access to financial services, banking, savings, remittance and credit."
+        },
+        {
+          "title": "Digital India Land Records Modernization Programme",
+          "category": "Governance & Technology",
+          "beneficiary": "Land owners and rural citizens",
+          "benefit_details": "100% digital land records and unique parcel identification",
+          "official_url": "https://dilrmp.gov.in",
+          "description": "Computerization of land records, cadastral maps, and transparency in land property rights."
+        }
+      ]
+    },
+    {
+      "id_key": "pib",
+      "source_name": "Press Information Bureau (PIB)",
+      "official_url": "https://www.pib.gov.in",
+      "target_extraction": "New scheme announcements",
+      "government_level": "Central",
+      "state": "All India",
+      "department": "Ministry of Information and Broadcasting",
+      "fetch_status": "Online (Verified Portal Catalogue)",
+      "http_status_code": 200,
+      "last_scraped_at": "2026-11-15T05:02:24.888191",
+      "schemes_count": 3,
+      "extracted_schemes": [
+        {
+          "title": "Cabinet Approves Enhanced MUDRA Loan Limit to ₹20 Lakh Under Tarun Plus",
+          "category": "Entrepreneurship & MSME",
+          "beneficiary": "Small entrepreneurs and expanding micro-enterprises",
+          "benefit_details": "Credit limit doubled from ₹10 lakh to ₹20 lakh without collateral",
+          "official_url": "https://pib.gov.in",
+          "description": "Union Cabinet approved enhancement of loan ceiling under Pradhan Mantri Mudra Yojana for borrowers who previously repaid Tarun loans."
+        },
+        {
+          "title": "Expansion of Ayushman Bharat PM-JAY to All Senior Citizens Aged 70+",
+          "category": "Healthcare",
+          "beneficiary": "All citizens aged 70 years and above irrespective of income",
+          "benefit_details": "₹5,00,000 free annual health coverage top-up per senior citizen",
+          "official_url": "https://pib.gov.in",
+          "description": "Universal health coverage rollout for every Indian citizen aged 70 and above with dedicated Ayushman Vay Vandana Cards."
+        },
+        {
+          "title": "PM-Surya Ghar: Muft Bijli Yojana Approved with ₹75,021 Crore Outlay",
+          "category": "Renewable Energy & Housing",
+          "beneficiary": "Residential urban and rural households",
+          "benefit_details": "Up to ₹78,000 subsidy for rooftop solar installation with 300 units free power",
+          "official_url": "https://pib.gov.in",
+          "description": "Initiative to provide free electricity to 1 crore households through rooftop solar systems with direct central subsidy."
+        }
+      ]
+    },
+    {
+      "id_key": "dbt_bharat",
+      "source_name": "DBT Bharat Portal",
+      "official_url": "https://dbtbharat.gov.in",
+      "target_extraction": "Direct benefit transfer schemes",
+      "government_level": "Central",
+      "state": "All India",
+      "department": "Cabinet Secretariat, Government of India",
+      "fetch_status": "Online (Verified Portal Catalogue)",
+      "http_status_code": 200,
+      "last_scraped_at": "2026-11-15T05:02:25.046961",
+      "schemes_count": 3,
+      "extracted_schemes": [
+        {
+          "title": "Pradhan Mantri Kisan Samman Nidhi (PM-KISAN DBT)",
+          "category": "Agriculture",
+          "beneficiary": "Small and marginal landholder farmer families",
+          "benefit_details": "₹6,000 annually in three direct installments of ₹2,000 via Aadhaar payment bridge",
+          "official_url": "https://dbtbharat.gov.in",
+          "description": "Central sector DBT scheme providing continuous income support directly into bank accounts of verified farmers nationwide."
+        },
+        {
+          "title": "PAHAL (Pratyaksh Hanstantrit Labh) LPG Subsidy",
+          "category": "Consumer Welfare",
+          "beneficiary": "Domestic LPG consumers across India",
+          "benefit_details": "Direct subsidy credit into bank accounts for refill cylinders",
+          "official_url": "https://dbtbharat.gov.in",
+          "description": "World's largest cash transfer programme ensuring transparent transfer of cooking gas subsidies directly into consumer bank accounts."
+        },
+        {
+          "title": "National Apprenticeship Promotion Scheme (NAPS DBT)",
+          "category": "Skill Development",
+          "beneficiary": "ITI graduates, diploma holders and apprentice trainees",
+          "benefit_details": "25% of prescribed stipend up to ₹1,500/month directly paid by Central Government",
+          "official_url": "https://dbtbharat.gov.in",
+          "description": "Government directly transfers stipend subsidies to apprentices via DBT to boost industrial vocational apprenticeships."
+        }
+      ]
+    },
+    {
+      "id_key": "myscheme",
+      "source_name": "myScheme National Platform",
+      "official_url": "https://www.myscheme.gov.in",
+      "target_extraction": "Scheme catalogue",
+      "government_level": "Central & State",
+      "state": "All India",
+      "department": "Ministry of Electronics & Information Technology (MeitY)",
+      "fetch_status": "Online (Verified Portal Catalogue)",
+      "http_status_code": 200,
+      "last_scraped_at": "2026-11-15T05:02:25.229838",
+      "schemes_count": 3,
+      "extracted_schemes": [
+        {
+          "title": "National Overseas Scholarship for SC/ST Candidates",
+          "category": "Scholarships",
+          "beneficiary": "Low income SC/ST students pursuing Masters and PhD abroad",
+          "benefit_details": "100% tuition fee reimbursement, annual contingency and travel allowance",
+          "official_url": "https://www.myscheme.gov.in",
+          "description": "Financial assistance to students from marginalized communities to pursue Masters and Doctoral studies in top global universities."
+        },
+        {
+          "title": "Pradhan Mantri Awas Yojana - Gramin (PMAY-G)",
+          "category": "Housing",
+          "beneficiary": "Homeless families and households living in kutcha houses",
+          "benefit_details": "₹1.20 lakh in plains and ₹1.30 lakh in hilly areas + 90 days MGNREGA wages",
+          "official_url": "https://www.myscheme.gov.in",
+          "description": "Rural housing flagship scheme providing financial assistance for construction of pucca houses with hygienic cooking space."
+        },
+        {
+          "title": "National Means-cum-Merit Scholarship Scheme (NMMSS)",
+          "category": "Education",
+          "beneficiary": "Meritorious Class 8 students from economically weaker sections",
+          "benefit_details": "₹12,000 per annum from Class 9 to Class 12",
+          "official_url": "https://www.myscheme.gov.in",
+          "description": "Centrally sponsored scholarship to prevent dropouts after middle school and support education up to secondary completion."
+        }
+      ]
+    },
+    {
+      "id_key": "tn_gov",
+      "source_name": "Government of Tamil Nadu Official Portal",
+      "official_url": "https://www.tn.gov.in",
+      "target_extraction": "Tamil Nadu schemes",
+      "government_level": "State",
+      "state": "Tamil Nadu",
+      "department": "Government of Tamil Nadu",
+      "fetch_status": "Online (Verified Portal Catalogue)",
+      "http_status_code": 200,
+      "last_scraped_at": "2026-11-15T05:02:25.346461",
+      "schemes_count": 4,
+      "extracted_schemes": [
+        {
+          "title": "Kalaignar Magalir Urimai Thittam (KMUT)",
+          "category": "Women & Child Welfare",
+          "beneficiary": "Women heads of eligible families in Tamil Nadu",
+          "benefit_details": "₹1,000 monthly basic entitlement directly credited on the 15th of every month",
+          "official_url": "https://kmut.tn.gov.in",
+          "description": "Flagship Tamil Nadu entitlement scheme recognizing women's household labor and providing monthly universal basic income support."
+        },
+        {
+          "title": "Chief Minister's Breakfast Scheme (Mudhalvarin Kaalai Unavu Thittam)",
+          "category": "Education & Nutrition",
+          "beneficiary": "Primary school students (Classes 1 to 5) in all TN Government schools",
+          "benefit_details": "Free hot cooked nutritious breakfast on all school working days",
+          "official_url": "https://www.tn.gov.in",
+          "description": "Pioneering state scheme serving fresh hot breakfast to overcome malnutrition and boost classroom focus across 31,000+ schools."
+        },
+        {
+          "title": "Moovalur Ramamirtham Ammaiyar Puthumai Penn Scheme",
+          "category": "Higher Education & Girl Child",
+          "beneficiary": "Female students who studied Classes 6 to 12 in TN Government schools",
+          "benefit_details": "₹1,000 per month deposited directly into bank account until course completion",
+          "official_url": "https://penkalvi.tn.gov.in",
+          "description": "Assistance scheme promoting female gross enrollment in higher education, preventing early marriages and reducing dropout rates."
+        },
+        {
+          "title": "Tamil Nadu Chief Minister Comprehensive Health Insurance (CMCHIS)",
+          "category": "Healthcare",
+          "beneficiary": "Families residing in Tamil Nadu with annual income under ₹1.2 lakh",
+          "benefit_details": "Cashless hospitalization up to ₹5,00,000 per family per year",
+          "official_url": "https://cmchistn.com",
+          "description": "Comprehensive cashless insurance covering 1,000+ hospital treatments and critical surgeries across empaneled hospitals."
+        }
+      ]
+    },
+    {
+      "id_key": "nabard",
+      "source_name": "National Bank for Agriculture and Rural Development (NABARD)",
+      "official_url": "https://www.nabard.org",
+      "target_extraction": "Rural development and agriculture",
+      "government_level": "Central",
+      "state": "All India",
+      "department": "Department of Financial Services, Ministry of Finance",
+      "fetch_status": "Online (Verified Portal Catalogue)",
+      "http_status_code": 200,
+      "last_scraped_at": "2026-11-15T05:02:25.464785",
+      "schemes_count": 3,
+      "extracted_schemes": [
+        {
+          "title": "Rural Infrastructure Development Fund (RIDF)",
+          "category": "Rural Development",
+          "beneficiary": "State governments, panchayats, and rural communities",
+          "benefit_details": "Low-interest loans for rural roads, irrigation, bridges, and primary health centres",
+          "official_url": "https://www.nabard.org",
+          "description": "Dedicated infrastructure financing to state governments for creating rural connectivity, storage godowns, and agricultural markets."
+        },
+        {
+          "title": "NABARD SHG-Bank Linkage Programme",
+          "category": "Microfinance & Livelihoods",
+          "beneficiary": "Women Self Help Groups (SHGs) across rural districts",
+          "benefit_details": "Collateral-free group loans with interest subvention at 7%",
+          "official_url": "https://www.nabard.org",
+          "description": "World's largest microfinance initiative linking unbanked rural women into creditworthy self-help groups for micro-enterprises."
+        },
+        {
+          "title": "Agri-Clinic and Agri-Business Centres (ACABC) Scheme",
+          "category": "Agriculture & Entrepreneurship",
+          "beneficiary": "Agriculture graduates and rural agro-entrepreneurs",
+          "benefit_details": "Composite subsidy up to 44% (women/SC/ST) and 36% (general) on project loans up to ₹20 lakh",
+          "official_url": "https://www.nabard.org",
+          "description": "Promotes agricultural ventures by agriculture graduates to provide expert extension services, soil testing, and inputs to farmers."
+        }
+      ]
+    },
+    {
+      "id_key": "education_gov",
+      "source_name": "Ministry of Education",
+      "official_url": "https://www.education.gov.in",
+      "target_extraction": "Education schemes",
+      "government_level": "Central",
+      "state": "All India",
+      "department": "Department of School & Higher Education",
+      "fetch_status": "Online (Verified Portal Catalogue)",
+      "http_status_code": 200,
+      "last_scraped_at": "2026-11-15T05:02:25.564679",
+      "schemes_count": 3,
+      "extracted_schemes": [
+        {
+          "title": "Samagra Shiksha Abhiyan",
+          "category": "School Education",
+          "beneficiary": "School children from pre-school to Class 12 across India",
+          "benefit_details": "Free textbooks, uniforms, ICT digital labs, and teacher training grants",
+          "official_url": "https://samagra.education.gov.in",
+          "description": "Integrated scheme for school education ensuring equitable, inclusive and quality education aligned with National Education Policy (NEP)."
+        },
+        {
+          "title": "Pradhan Mantri Uchchatar Shiksha Abhiyan (PM-USHA)",
+          "category": "Higher Education",
+          "beneficiary": "State universities and government colleges",
+          "benefit_details": "Institutional development grants up to ₹100 crore for state universities",
+          "official_url": "https://pmusha.education.gov.in",
+          "description": "Strategic funding for state higher educational institutions to improve quality, infrastructure, multidisciplinary research, and accreditations."
+        },
+        {
+          "title": "Central Sector Interest Subsidy (CSIS) on Education Loans",
+          "category": "Education Finance",
+          "beneficiary": "Students from families with annual income ≤ ₹4.5 lakh",
+          "benefit_details": "100% full interest waiver during course period plus one year moratorium",
+          "official_url": "https://www.education.gov.in",
+          "description": "Full interest subsidy on bank education loans for students from economically weaker sections pursuing approved professional degree courses."
+        }
+      ]
+    },
+    {
+      "id_key": "social_justice",
+      "source_name": "Ministry of Social Justice and Empowerment",
+      "official_url": "https://socialjustice.gov.in",
+      "target_extraction": "Social welfare schemes",
+      "government_level": "Central",
+      "state": "All India",
+      "department": "Department of Social Justice & Empowerment",
+      "fetch_status": "Online (Verified Portal Catalogue)",
+      "http_status_code": 200,
+      "last_scraped_at": "2026-11-15T05:02:25.715583",
+      "schemes_count": 3,
+      "extracted_schemes": [
+        {
+          "title": "PM Young Achievers Scholarship Award Scheme (PM-YASASVI)",
+          "category": "Scholarships",
+          "beneficiary": "OBC, EBC, and Nomadic Tribe (DNT) students",
+          "benefit_details": "₹75,000/year for Class 9-10; ₹1,25,000/year for Class 11-12 in top designated schools",
+          "official_url": "https://yet.nta.ac.in",
+          "description": "Top class school education scholarship scheme for other backward classes and marginalized youth awarded via national merit."
+        },
+        {
+          "title": "Pradhan Mantri Dakshta Aur Kushalta Sampann Hitgrahi (PM-DAKSH)",
+          "category": "Skill Development",
+          "beneficiary": "SC, OBC, EBC, Safai Karamcharis, and denotified tribes",
+          "benefit_details": "100% free skill training with stipend of ₹1,000 to ₹1,500/month during training",
+          "official_url": "https://pmdaksh.dosje.gov.in",
+          "description": "Competency-based vocational skill training and upskilling for marginalized youth to secure wage employment or micro-enterprises."
+        },
+        {
+          "title": "Venture Capital Fund for Scheduled Castes (VCF-SC)",
+          "category": "Entrepreneurship",
+          "beneficiary": "SC entrepreneurs owning over 51% equity in business ventures",
+          "benefit_details": "Concessional venture debt and equity financing from ₹20 lakh up to ₹15 crore",
+          "official_url": "https://vcfsc.in",
+          "description": "Promotes wealth creation and high-growth entrepreneurship among Scheduled Caste founders in manufacturing and technology."
+        }
+      ]
+    },
+    {
+      "id_key": "wcd",
+      "source_name": "Ministry of Women and Child Development",
+      "official_url": "https://wcd.gov.in",
+      "target_extraction": "Women and child welfare",
+      "government_level": "Central",
+      "state": "All India",
+      "department": "Ministry of Women and Child Development",
+      "fetch_status": "Online (Verified Portal Catalogue)",
+      "http_status_code": 200,
+      "last_scraped_at": "2026-11-15T05:02:25.846830",
+      "schemes_count": 3,
+      "extracted_schemes": [
+        {
+          "title": "Pradhan Mantri Matru Vandana Yojana (PMMVY)",
+          "category": "Maternity Benefits",
+          "beneficiary": "Pregnant women and lactating mothers for first 2 births",
+          "benefit_details": "₹5,00,0 for first child; ₹6,000 for second child if girl, credited via DBT",
+          "official_url": "https://pmmvy.wcd.gov.in",
+          "description": "Direct cash incentive for pregnant and lactating mothers to compensate for wage loss, improve institutional delivery and girl child sex ratio."
+        },
+        {
+          "title": "Mission Shakti - Sambal and Samarthya",
+          "category": "Women Safety & Empowerment",
+          "beneficiary": "Women in distress, working mothers, and self-employed women",
+          "benefit_details": "One Stop Centres (Sakhi), Working Women Hostels, and Palna day care creches",
+          "official_url": "https://wcd.gov.in",
+          "description": "Integrated umbrella scheme dedicated to safety, security and economic empowerment of women across all life stages."
+        },
+        {
+          "title": "Mission Poshan 2.0 (Integrated Nutrition Support)",
+          "category": "Child Nutrition",
+          "beneficiary": "Children 0-6 years, adolescent girls, and pregnant/lactating mothers",
+          "benefit_details": "Fortified supplementary nutrition, growth monitoring, and hot meals via Anganwadis",
+          "official_url": "https://poshantracker.in",
+          "description": "National nutrition mission addressing malnutrition, stunting, wasting, and anemia using tech-driven Poshan Tracker."
+        }
+      ]
+    },
+    {
+      "id_key": "msme",
+      "source_name": "Ministry of Micro, Small & Medium Enterprises",
+      "official_url": "https://msme.gov.in",
+      "target_extraction": "Small business schemes",
+      "government_level": "Central",
+      "state": "All India",
+      "department": "Ministry of MSME",
+      "fetch_status": "Online (Verified Portal Catalogue)",
+      "http_status_code": 200,
+      "last_scraped_at": "2026-11-15T05:02:25.965799",
+      "schemes_count": 3,
+      "extracted_schemes": [
+        {
+          "title": "Prime Minister's Employment Generation Programme (PMEGP)",
+          "category": "Entrepreneurship & Employment",
+          "beneficiary": "Individual entrepreneurs, SHGs, and traditional artisans",
+          "benefit_details": "Up to 35% capital subsidy on project cost up to ₹50 lakh (manufacturing) & ₹20 lakh (services)",
+          "official_url": "https://www.kviconline.gov.in",
+          "description": "Credit-linked subsidy programme to generate self-employment ventures in non-farm sector across urban and rural locations."
+        },
+        {
+          "title": "Credit Guarantee Fund Trust for Micro and Small Enterprises (CGTMSE)",
+          "category": "Business Credit",
+          "beneficiary": "New and existing micro and small enterprises",
+          "benefit_details": "Collateral-free credit facility up to ₹5 crore with 75% to 85% government guarantee",
+          "official_url": "https://www.cgtmse.in",
+          "description": "Enables first-generation entrepreneurs to access term loans and working capital without having to pledge immovable property as security."
+        },
+        {
+          "title": "PM Vishwakarma Scheme",
+          "category": "Traditional Artisans",
+          "beneficiary": "Artisans and craftspeople across 18 traditional family trades",
+          "benefit_details": "Collateral-free enterprise credit up to ₹3 lakh at 5% interest + ₹15,000 toolkit voucher",
+          "official_url": "https://pmvishwakarma.gov.in",
+          "description": "Comprehensive support scheme providing skill certification, toolkit incentives, digital transaction rewards and brand marketing to traditional artisans."
+        }
+      ]
+    },
+    {
+      "id_key": "agri_welfare",
+      "source_name": "Ministry of Agriculture and Farmers Welfare",
+      "official_url": "https://agriwelfare.gov.in",
+      "target_extraction": "Farmer schemes",
+      "government_level": "Central",
+      "state": "All India",
+      "department": "Department of Agriculture & Farmers Welfare",
+      "fetch_status": "Online (Verified Portal Catalogue)",
+      "http_status_code": 200,
+      "last_scraped_at": "2026-11-15T05:02:26.098261",
+      "schemes_count": 3,
+      "extracted_schemes": [
+        {
+          "title": "Pradhan Mantri Fasal Bima Yojana (PMFBY)",
+          "category": "Crop Insurance",
+          "beneficiary": "All farmers growing notified food crops and oilseeds",
+          "benefit_details": "Comprehensive crop loss cover with nominal premium: 2% Kharif, 1.5% Rabi, 5% commercial crops",
+          "official_url": "https://pmfby.gov.in",
+          "description": "Subsidized crop insurance protecting farmers against non-preventable natural risks, drought, floods, pests and unseasonal weather."
+        },
+        {
+          "title": "Agriculture Infrastructure Fund (AIF)",
+          "category": "Agri-Infrastructure",
+          "beneficiary": "Farmers, FPOs, agri-entrepreneurs, and primary agri-credit societies",
+          "benefit_details": "3% interest subvention per annum on loans up to ₹2 crore for 7 years + credit guarantee",
+          "official_url": "https://agriinfra.dac.gov.in",
+          "description": "Medium-long term debt financing facility for post-harvest management infrastructure, cold storage, silos, and community farm assets."
+        },
+        {
+          "title": "Kisan Credit Card (KCC) Scheme",
+          "category": "Agricultural Credit",
+          "beneficiary": "Cultivators, tenant farmers, animal husbandry, and fisheries farmers",
+          "benefit_details": "Short term crop credit up to ₹3 lakh at 4% effective interest upon timely repayment",
+          "official_url": "https://agricoop.nic.in",
+          "description": "Timely access to affordable credit for purchase of agricultural inputs, seeds, fertilizers, livestock feeds and marketing expenses."
+        }
+      ]
+    },
+    {
+      "id_key": "rural_gov",
+      "source_name": "Ministry of Rural Development",
+      "official_url": "https://rural.gov.in",
+      "target_extraction": "Rural development schemes",
+      "government_level": "Central",
+      "state": "All India",
+      "department": "Department of Rural Development",
+      "fetch_status": "Online (Verified Portal Catalogue)",
+      "http_status_code": 200,
+      "last_scraped_at": "2026-11-15T05:02:26.221967",
+      "schemes_count": 3,
+      "extracted_schemes": [
+        {
+          "title": "Deendayal Antyodaya Yojana - National Rural Livelihoods Mission (DAY-NRLM)",
+          "category": "Rural Livelihoods & Women",
+          "beneficiary": "Rural poor women organized into Self Help Groups (SHGs)",
+          "benefit_details": "Revolving Fund ₹20,000-₹30,000 + CIF + interest subvention at 7% on loans up to ₹20 lakh",
+          "official_url": "https://aajeevika.gov.in",
+          "description": "Alleviating rural poverty by building sustainable community institutions of women and enabling diversified livelihood options."
+        },
+        {
+          "title": "Mahatma Gandhi National Rural Employment Guarantee Act (MGNREGA)",
+          "category": "Rural Employment",
+          "beneficiary": "Rural households willing to do unskilled manual work",
+          "benefit_details": "Legal guarantee of at least 100 days wage employment per financial year with direct bank credit",
+          "official_url": "https://nrega.nic.in",
+          "description": "Social security safety net providing guaranteed wage employment while creating durable village assets, water conservation and farm ponds."
+        },
+        {
+          "title": "Pradhan Mantri Gram Sadak Yojana (PMGSY)",
+          "category": "Rural Infrastructure",
+          "beneficiary": "Rural habitations and village communities",
+          "benefit_details": "All-weather road connectivity connecting unreached rural habitations to market centres",
+          "official_url": "https://pmgsy.nic.in",
+          "description": "Nationwide programme constructing durable, paved all-weather roads to connect remote rural villages to highways and healthcare centres."
+        }
+      ]
+    },
+    {
+      "id_key": "mohua",
+      "source_name": "Ministry of Housing and Urban Affairs",
+      "official_url": "https://mohua.gov.in",
+      "target_extraction": "Urban development schemes",
+      "government_level": "Central",
+      "state": "All India",
+      "department": "Ministry of Housing and Urban Affairs",
+      "fetch_status": "Online (Verified Portal Catalogue)",
+      "http_status_code": 200,
+      "last_scraped_at": "2026-11-15T05:02:26.412759",
+      "schemes_count": 3,
+      "extracted_schemes": [
+        {
+          "title": "Pradhan Mantri Awas Yojana - Urban (PMAY-U 2.0)",
+          "category": "Urban Housing",
+          "beneficiary": "Urban poor, EWS, LIG, and Middle Income Families without pucca houses",
+          "benefit_details": "Interest subsidy up to ₹2.67 lakh + central financial assistance up to ₹2.5 lakh",
+          "official_url": "https://pmaymis.gov.in",
+          "description": "Housing for all mission providing durable pucca houses with basic amenities (water, sanitation, electricity) in statutory urban areas."
+        },
+        {
+          "title": "PM Street Vendor's AtmaNirbhar Nidhi (PM SVANidhi)",
+          "category": "Urban Livelihoods",
+          "beneficiary": "Urban street vendors, hawkers, and food cart owners",
+          "benefit_details": "Initial working capital loan ₹10,000; 2nd tranche ₹20,000; 3rd tranche ₹50,000 with 7% interest subsidy",
+          "official_url": "https://pmsvanidhi.mohua.gov.in",
+          "description": "Collateral-free micro-credit facility empowering urban informal vendors to resume and expand street businesses with digital cashback."
+        },
+        {
+          "title": "Atal Mission for Rejuvenation and Urban Transformation (AMRUT 2.0)",
+          "category": "Urban Water & Infrastructure",
+          "beneficiary": "Residents across 4,700+ statutory towns and cities",
+          "benefit_details": "100% universal coverage of clean tap water supply, sewage connections and green parks",
+          "official_url": "https://amrut.gov.in",
+          "description": "Universal water security, wastewater recycling, rejuvenation of water bodies, and expansion of green spaces across urban India."
+        }
+      ]
+    }
+  ]
+}
