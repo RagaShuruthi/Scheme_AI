@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: schemesaarthi_backend
+    environment:
+      - DATABASE_URL=sqlite:///./scheme_saarthi.db
+      - JWT_SECRET=super-secret-schemesaarthi-jwt-key-2026
+      - GEMINI_API_KEY=${GEMINI_API_KEY:-}
+      - OLLAMA_URL=${OLLAMA_URL:-http://localhost:11434}
+      - SCRAPER_INTERVAL_MINUTES=60
+    volumes:
+      - ./backend/scheme_saarthi.db:/app/scheme_saarthi.db
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: schemesaarthi_frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+    restart: unless-stopped
