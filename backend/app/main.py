@@ -2,7 +2,14 @@ import logging
 from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from apscheduler.schedulers.background import BackgroundScheduler
+
+try:
+    from apscheduler.schedulers.background import BackgroundScheduler
+    scheduler = BackgroundScheduler()
+    HAS_APSCHEDULER = True
+except ImportError:
+    scheduler = None
+    HAS_APSCHEDULER = False
 
 from app.config import settings
 from app.database import engine, Base, SessionLocal
@@ -13,8 +20,6 @@ from app.models.models import GovernmentSource
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("SchemeSaarthi")
-
-scheduler = BackgroundScheduler()
 
 def scheduled_scraper_job():
     logger.info("Executing scheduled government source update verification...")
@@ -44,23 +49,26 @@ async def lifespan(app: FastAPI):
     finally:
         db.close()
 
-    # Start background scheduler
-    try:
-        scheduler.add_job(
-            scheduled_scraper_job,
-            "interval",
-            minutes=settings.SCRAPER_INTERVAL_MINUTES,
-            id="gov_source_monitor"
-        )
-        scheduler.start()
-        logger.info("APScheduler background monitoring engine started.")
-    except Exception as e:
-        logger.warning(f"Could not start background scheduler: {e}")
+    # Start background scheduler if available
+    if HAS_APSCHEDULER and scheduler:
+        try:
+            scheduler.add_job(
+                scheduled_scraper_job,
+                "interval",
+                minutes=settings.SCRAPER_INTERVAL_MINUTES,
+                id="gov_source_monitor"
+            )
+            scheduler.start()
+            logger.info("APScheduler background monitoring engine started.")
+        except Exception as e:
+            logger.warning(f"Could not start background scheduler: {e}")
+    else:
+        logger.info("APScheduler not installed; skipping periodic background scraper.")
 
     yield
 
     # Shutdown
-    if scheduler.running:
+    if HAS_APSCHEDULER and scheduler and scheduler.running:
         scheduler.shutdown(wait=False)
         logger.info("APScheduler stopped.")
 
