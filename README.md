@@ -132,11 +132,11 @@ Platform target URLs are configured in a single file (`config.js`). All navigati
 ```javascript
 const CITIZEN_CONFIG = {
   // Default Production & Development URLs
-  SCHEME_SAARTHI_URL: "https://schemes.citizensaarthi.in",
+  SCHEME_SAARTHI_URL: "http://localhost:5173",
   LAW_SAARTHI_URL: "http://127.0.0.1:8000",
 
   // Local Development URLs
-  DEV_SCHEME_SAARTHI_URL: "http://localhost:3000",
+  DEV_SCHEME_SAARTHI_URL: "http://localhost:5173",
   DEV_LAW_SAARTHI_URL: "http://127.0.0.1:8000",
 
   AUTO_DETECT_LOCALHOST: true
