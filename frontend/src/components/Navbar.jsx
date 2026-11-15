@@ -80,9 +80,6 @@ const Navbar = () => {
                 <span className="font-black text-lg tracking-tight text-slate-900 group-hover:text-blue-700 transition-colors">
                   SchemeSaarthi
                 </span>
-                <span className="hidden xl:inline-block px-1.5 py-0.5 rounded-full text-[9px] font-bold bg-blue-50 text-blue-700 border border-blue-200/60">
-                  AI
-                </span>
               </div>
             </Link>
 

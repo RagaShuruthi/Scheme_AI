@@ -166,29 +166,13 @@ const Home = () => {
             <span className="font-bold text-slate-900">
               {lang === 'ta' ? '2,105+ அரசு நலத்திட்டங்கள்' : '2,105+ Verified Schemes'}
             </span>
-            <span className="text-slate-300">|</span>
-            <span className="text-blue-700 font-medium">
-              {lang === 'ta' ? 'குரல் & AI வழிகாட்டி' : 'Voice & AI Assistant'}
-            </span>
           </div>
 
           {/* Inspiring Headline */}
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-slate-900 leading-[1.15] max-w-4xl mx-auto">
-            {lang === 'ta' ? (
-              <>
-                உங்களுக்கான அரசு நலத்திட்டங்கள்.{' '}
-                <span className="bg-gradient-to-r from-blue-700 via-indigo-600 to-amber-600 bg-clip-text text-transparent">
-                  AI மற்றும் குரல் வழிகாட்டலுடன்.
-                </span>
-              </>
-            ) : (
-              <>
-                Find Government Schemes Built for You.{' '}
-                <span className="bg-gradient-to-r from-blue-700 via-indigo-600 to-amber-600 bg-clip-text text-transparent">
-                  Powered by Voice & AI.
-                </span>
-              </>
-            )}
+            {lang === 'ta'
+              ? 'உங்களுக்கான அரசு நலத்திட்டங்கள்'
+              : 'Find Government Schemes Built for You'}
           </h1>
 
           {/* Intelligent Omnibox with Speech-to-Text */}
