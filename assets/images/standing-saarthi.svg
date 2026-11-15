@@ -1,0 +1,333 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 540" fill="none" class="saarthi-man-svg" id="saarthiProSvg" role="img" aria-label="Citizen Saarthi - Professional Indian Citizen Guide">
+  <defs>
+    <!-- Premium Color Gradients -->
+    <linearGradient id="proSkin" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FDDEC4"/>
+      <stop offset="55%" stop-color="#F2B890"/>
+      <stop offset="100%" stop-color="#DE9666"/>
+    </linearGradient>
+
+    <!-- Tailored Royal Bandhgala / Nehru Vest -->
+    <linearGradient id="proVest" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#214E96"/>
+      <stop offset="45%" stop-color="#15366D"/>
+      <stop offset="100%" stop-color="#0E2342"/>
+    </linearGradient>
+
+    <!-- Crisp Kurta / Shirt Shadow -->
+    <linearGradient id="proShirt" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="85%" stop-color="#F1F5F9"/>
+      <stop offset="100%" stop-color="#E2E8F0"/>
+    </linearGradient>
+
+    <!-- Polished Gold Dome Buttons & Emblem -->
+    <linearGradient id="proGold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FDE68A"/>
+      <stop offset="50%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#B45309"/>
+    </linearGradient>
+
+    <!-- Saffron Silk Accent -->
+    <linearGradient id="proSaffron" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FBBF24"/>
+      <stop offset="100%" stop-color="#EA580C"/>
+    </linearGradient>
+
+    <!-- Constitution Book Binding -->
+    <linearGradient id="proBook" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+
+    <!-- Trousers Shadow -->
+    <linearGradient id="proPants" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+
+    <!-- Soft Glow Filter -->
+    <filter id="proSoftGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <filter id="proElementShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#0E2342" flood-opacity="0.18"/>
+    </filter>
+
+    <style>
+      @keyframes saarthiGentleFloat {
+        0%, 100% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-8px);
+        }
+      }
+
+      @keyframes saarthiPortalPulse {
+        0%, 100% {
+          transform: scale(1) rotate(0deg);
+          opacity: 0.85;
+        }
+        50% {
+          transform: scale(1.03) rotate(3deg);
+          opacity: 1;
+        }
+      }
+
+      @keyframes saarthiWelcomeWave {
+        0%, 100% {
+          transform: rotate(0deg);
+        }
+        25% {
+          transform: rotate(-5deg) translateY(-2px);
+        }
+        50% {
+          transform: rotate(3deg) translateY(1px);
+        }
+        75% {
+          transform: rotate(-3deg);
+        }
+      }
+
+      @keyframes saarthiNodeBlink {
+        0%, 100% {
+          opacity: 0.6;
+          transform: scale(0.96);
+        }
+        50% {
+          opacity: 1;
+          transform: scale(1.05);
+        }
+      }
+
+      .saarthi-figure-all {
+        animation: saarthiGentleFloat 4s ease-in-out infinite;
+        transform-origin: 210px 500px;
+      }
+
+      .saarthi-portal-bg {
+        animation: saarthiPortalPulse 8s ease-in-out infinite;
+        transform-origin: 210px 250px;
+      }
+
+      .saarthi-arm-welcome {
+        animation: saarthiWelcomeWave 3.5s ease-in-out infinite;
+        transform-origin: 285px 210px;
+      }
+
+      .saarthi-node-pulse {
+        animation: saarthiNodeBlink 3s ease-in-out infinite;
+      }
+    </style>
+  </defs>
+
+  <!-- ========================================================
+       BACKGROUND: ELEGANT CIVIC PORTAL & CONSTELLATION AURA
+       ======================================================== -->
+  <g class="saarthi-portal-bg">
+    <!-- Ambient Radial Glow -->
+    <circle cx="210" cy="250" r="160" fill="#2457A7" opacity="0.06" filter="url(#proSoftGlow)"/>
+    <circle cx="210" cy="245" r="145" stroke="rgba(36, 87, 167, 0.15)" stroke-width="1.5" stroke-dasharray="6 4" fill="none"/>
+    <circle cx="210" cy="245" r="125" stroke="rgba(242, 165, 65, 0.25)" stroke-width="1" fill="none"/>
+  </g>
+
+  <!-- Floating Digital Civic Constellation Nodes -->
+  <g class="saarthi-node-pulse">
+    <!-- Node 1: Schemes (Upper Left) -->
+    <g transform="translate(68, 140)">
+      <circle cx="0" cy="0" r="18" fill="#FFFFFF" filter="url(#proElementShadow)"/>
+      <circle cx="0" cy="0" r="18" stroke="#F2A541" stroke-width="1.5" fill="none"/>
+      <!-- Saffron Scheme Icon -->
+      <path d="M-6 4 L0 -6 L6 4 Z" fill="#F2A541"/>
+      <circle cx="0" cy="1" r="1.5" fill="#FFFFFF"/>
+      <rect x="22" y="-12" width="76" height="22" rx="11" fill="rgba(255, 255, 255, 0.95)" stroke="#F2A541" stroke-width="1"/>
+      <text x="60" y="3" font-family="system-ui, sans-serif" font-size="7.5" font-weight="700" fill="#102B50" text-anchor="middle">SCHEMES</text>
+    </g>
+
+    <!-- Node 2: Laws & RTI (Upper Right) -->
+    <g transform="translate(345, 140)">
+      <circle cx="0" cy="0" r="18" fill="#FFFFFF" filter="url(#proElementShadow)"/>
+      <circle cx="0" cy="0" r="18" stroke="#2457A7" stroke-width="1.5" fill="none"/>
+      <!-- Scales of Justice Icon -->
+      <path d="M0 -7 V7 M-6 -2 H6 M-8 3 L-6 -2 L-4 3 Z M4 3 L6 -2 L8 3 Z" stroke="#2457A7" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+      <rect x="-95" y="-12" width="72" height="22" rx="11" fill="rgba(255, 255, 255, 0.95)" stroke="#2457A7" stroke-width="1"/>
+      <text x="-59" y="3" font-family="system-ui, sans-serif" font-size="7.5" font-weight="700" fill="#102B50" text-anchor="middle">LAWS &amp; RTI</text>
+    </g>
+
+    <!-- Node 3: Constitution Rights (Lower Right) -->
+    <g transform="translate(335, 335)">
+      <circle cx="0" cy="0" r="15" fill="#FFFFFF" filter="url(#proElementShadow)"/>
+      <circle cx="0" cy="0" r="15" stroke="#10B981" stroke-width="1.2" fill="none"/>
+      <!-- Shield Checkmark -->
+      <path d="M-4 0 L-1 3 L5 -3" stroke="#10B981" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+      <rect x="-92" y="-10" width="72" height="20" rx="10" fill="rgba(255, 255, 255, 0.95)" stroke="#10B981" stroke-width="1"/>
+      <text x="-56" y="3.5" font-family="system-ui, sans-serif" font-size="7" font-weight="700" fill="#047857" text-anchor="middle">EQUAL RIGHTS</text>
+    </g>
+  </g>
+
+  <!-- Ground Shadow under Shoes -->
+  <ellipse cx="210" cy="505" rx="85" ry="12" fill="#102B50" opacity="0.22" filter="url(#proSoftGlow)"/>
+
+  <!-- ========================================================
+       MAIN CHARACTER: CITIZEN SAARTHI (PROFESSIONAL EMBLEM)
+       ======================================================== -->
+  <g class="saarthi-figure-all" filter="url(#proElementShadow)">
+
+    <!-- LEGS & SHOES: Tailored & Crisp -->
+    <g>
+      <!-- Left Leg -->
+      <path d="M182 335 L174 465 L198 465 L204 335 Z" fill="url(#proPants)"/>
+      <!-- Left Polished Formal Shoe -->
+      <path d="M168 465 C168 458 190 455 204 462 L206 476 L152 480 C146 480 144 470 156 466 Z" fill="#0F172A"/>
+      <rect x="150" y="474" width="56" height="5" rx="2" fill="#1E293B"/>
+
+      <!-- Right Leg -->
+      <path d="M216 335 L222 465 L246 465 L238 335 Z" fill="url(#proPants)"/>
+      <!-- Right Polished Formal Shoe -->
+      <path d="M222 465 C222 458 244 455 258 462 L260 476 L206 480 C200 480 200 470 210 466 Z" fill="#0F172A"/>
+      <rect x="204" y="474" width="56" height="5" rx="2" fill="#1E293B"/>
+    </g>
+
+    <!-- CRISP WHITE / IVORY FORMAL MANDARIN KURTA BASE -->
+    <path d="M160 178 L260 178 L256 345 L164 345 Z" fill="url(#proShirt)"/>
+
+    <!-- TAILORED ROYAL NAVY BANDHGALA / NEHRU WAISTCOAT -->
+    <!-- Left Panel -->
+    <path d="M162 174 L138 205 L144 336 L188 336 L190 205 Z" fill="url(#proVest)"/>
+    <!-- Right Panel -->
+    <path d="M258 174 L282 205 L276 336 L232 336 L230 205 Z" fill="url(#proVest)"/>
+    <!-- Center Back Inset -->
+    <rect x="188" y="195" width="44" height="141" fill="#15366D"/>
+    <!-- Mandarin Standing Collar Trim -->
+    <path d="M174 172 C192 184 228 184 246 172 L250 179 C228 192 192 192 170 179 Z" fill="#2457A7"/>
+
+    <!-- 5 POLISHED GOLD EMBOSSED DOME BUTTONS -->
+    <circle cx="210" cy="208" r="3.5" fill="url(#proGold)"/>
+    <circle cx="210" cy="232" r="3.5" fill="url(#proGold)"/>
+    <circle cx="210" cy="256" r="3.5" fill="url(#proGold)"/>
+    <circle cx="210" cy="280" r="3.5" fill="url(#proGold)"/>
+    <circle cx="210" cy="304" r="3.5" fill="url(#proGold)"/>
+
+    <!-- SAFFRON SILK POCKET SQUARE & GOLDEN CITIZEN BADGE -->
+    <!-- Pocket slit -->
+    <line x1="152" y1="225" x2="174" y2="225" stroke="#F2A541" stroke-width="1.5"/>
+    <!-- Folded Saffron Silk Point -->
+    <polygon points="158,225 163,214 168,225" fill="url(#proSaffron)"/>
+    <polygon points="164,225 169,216 173,225" fill="#FBBF24"/>
+    <!-- Golden Ashoka Lion Lapel Pin -->
+    <circle cx="248" cy="224" r="6" fill="url(#proGold)"/>
+    <circle cx="248" cy="224" r="3.5" fill="#102B50"/>
+
+    <!-- ========================================================
+         LEFT ARM: DIGNIFIED ARM HOLDING CONSTITUTION OF INDIA
+         ======================================================== -->
+    <g>
+      <!-- Sleeve -->
+      <path d="M140 182 L112 235 L130 242 L154 195 Z" fill="url(#proVest)"/>
+      <!-- Forearm in Crisp White Shirt -->
+      <path d="M118 238 L114 305 L132 305 L136 242 Z" fill="url(#proShirt)"/>
+      <rect x="114" y="298" width="18" height="6" rx="2" fill="#CBD5E1"/>
+      <!-- Hand holding the Constitution -->
+      <ellipse cx="122" cy="312" rx="9" ry="8" fill="url(#proSkin)"/>
+
+      <!-- THE CONSTITUTION OF INDIA &amp; CIVIC GUIDE -->
+      <g transform="translate(86, 275) rotate(-6)" filter="url(#proElementShadow)">
+        <!-- Book Binding &amp; Cover -->
+        <rect x="0" y="0" width="58" height="80" rx="5" fill="url(#proBook)" stroke="#F59E0B" stroke-width="1.8"/>
+        <!-- Spine Border -->
+        <line x1="9" y1="0" x2="9" y2="80" stroke="#F59E0B" stroke-width="1.5"/>
+        <!-- Inner Decorative Gold Foil Filigree Border -->
+        <rect x="14" y="6" width="38" height="68" rx="2" stroke="#FDE68A" stroke-width="0.8" stroke-dasharray="2 1" fill="none"/>
+        <!-- Ashoka Chakra Gold Emblem -->
+        <circle cx="33" cy="30" r="11" stroke="#F59E0B" stroke-width="1.2" stroke-dasharray="2 1"/>
+        <circle cx="33" cy="30" r="4" fill="#F59E0B"/>
+        <!-- Gold Embossed Typography -->
+        <text x="33" y="52" font-family="system-ui, Georgia, serif" font-weight="900" font-size="5" fill="#FDE68A" text-anchor="middle" letter-spacing="0.5">CONSTITUTION</text>
+        <text x="33" y="60" font-family="system-ui, Georgia, serif" font-weight="800" font-size="4.5" fill="#FAF9F6" text-anchor="middle">OF INDIA</text>
+        <circle cx="33" cy="67" r="1.5" fill="#F59E0B"/>
+      </g>
+    </g>
+
+    <!-- ========================================================
+         RIGHT ARM: WARM, CONFIDENT OPEN-PALM WELCOME GESTURE
+         ======================================================== -->
+    <g class="saarthi-arm-welcome">
+      <!-- Sleeve -->
+      <path d="M260 182 L290 230 L274 238 L246 195 Z" fill="url(#proVest)"/>
+      <!-- Forearm in Crisp White Shirt -->
+      <path d="M284 234 L318 200 L330 210 L298 244 Z" fill="url(#proShirt)"/>
+      <!-- Watch on Wrist -->
+      <rect x="306" y="206" width="10" height="12" rx="3" fill="#1E293B" transform="rotate(-40 306 206)"/>
+      <circle cx="311" cy="212" r="2.5" fill="#F59E0B"/>
+      <!-- Refined Open Hand in Welcoming Presentation -->
+      <g transform="translate(320, 192) rotate(-15)">
+        <ellipse cx="10" cy="12" rx="9" ry="8" fill="url(#proSkin)"/>
+        <!-- 4 Extended Fingers -->
+        <rect x="5" y="-10" width="5" height="18" rx="2.5" fill="url(#proSkin)"/>
+        <rect x="11" y="-12" width="5" height="20" rx="2.5" fill="url(#proSkin)"/>
+        <rect x="17" y="-9" width="4.5" height="17" rx="2.2" fill="url(#proSkin)"/>
+        <rect x="22.5" y="-5" width="4" height="13" rx="2" fill="url(#proSkin)"/>
+        <!-- Thumb in Natural Angle -->
+        <rect x="-3" y="6" width="9" height="5" rx="2.5" fill="url(#proSkin)" transform="rotate(-30)"/>
+        <!-- Subtle Golden Welcoming Sparkle -->
+        <path d="M12 -18 L14 -15 L17 -13 L14 -11 L12 -8 L10 -11 L7 -13 L10 -15 Z" fill="#F2A541"/>
+      </g>
+    </g>
+
+    <!-- NECK & CRISP MANDARIN COLLAR -->
+    <rect x="202" y="152" width="16" height="26" rx="4" fill="#DE9666"/>
+    <path d="M196 170 C204 176 216 176 224 170 L226 176 C216 182 204 182 194 176 Z" fill="#FFFFFF"/>
+
+    <!-- ========================================================
+         HEAD: INTELLIGENT, APPROACHABLE, CHARISMATIC SAARTHI
+         ======================================================== -->
+    <g>
+      <!-- Face Base Shape -->
+      <path d="M184 94 C184 62 236 62 236 94 C236 128 230 154 210 154 C190 154 184 128 184 94 Z" fill="url(#proSkin)"/>
+      <!-- Jaw Contours -->
+      <path d="M192 134 C198 144 222 144 228 134" stroke="#C88558" stroke-width="1.2" fill="none"/>
+
+      <!-- Ears -->
+      <ellipse cx="182" cy="106" rx="4.5" ry="8" fill="url(#proSkin)"/>
+      <ellipse cx="238" cy="106" rx="4.5" ry="8" fill="url(#proSkin)"/>
+
+      <!-- Well-Groomed Modern Haircut (Clean Fade + Texture) -->
+      <path d="M180 88 C177 56 200 44 216 42 C236 40 250 54 246 80 C244 86 248 90 242 94 C236 80 228 76 214 76 C198 76 188 82 184 92 Z" fill="#111827"/>
+      <path d="M198 48 Q208 38 220 46 Q230 38 238 52" stroke="#1F2937" stroke-width="3" stroke-linecap="round" fill="none"/>
+      <path d="M186 64 Q198 52 212 60" stroke="#1F2937" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+
+      <!-- MODERN SOPHISTICATED WIRE-RIM GLASSES -->
+      <!-- Eyebrows (Warm &amp; Intelligent) -->
+      <path d="M188 88 Q198 83 206 87" stroke="#111827" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M214 87 Q222 83 232 88" stroke="#111827" stroke-width="2.5" stroke-linecap="round"/>
+
+      <!-- Glasses Rims -->
+      <rect x="187" y="93" width="20" height="15" rx="5" fill="rgba(255, 255, 255, 0.45)" stroke="#1E293B" stroke-width="1.8"/>
+      <rect x="213" y="93" width="20" height="15" rx="5" fill="rgba(255, 255, 255, 0.45)" stroke="#1E293B" stroke-width="1.8"/>
+      <!-- Gold Bridge -->
+      <line x1="207" y1="99" x2="213" y2="99" stroke="#F59E0B" stroke-width="2"/>
+      <!-- Anti-Glare Specular Highlights -->
+      <line x1="190" y1="97" x2="201" y2="103" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" opacity="0.8"/>
+      <line x1="216" y1="97" x2="227" y2="103" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" opacity="0.8"/>
+
+      <!-- Warm, Intelligent Eyes -->
+      <circle cx="197" cy="101" r="3.2" fill="#111827"/>
+      <circle cx="198" cy="99.5" r="1" fill="#FFFFFF"/>
+      <circle cx="223" cy="101" r="3.2" fill="#111827"/>
+      <circle cx="224" cy="99.5" r="1" fill="#FFFFFF"/>
+
+      <!-- Nose -->
+      <path d="M210 100 L208 113 L213 113" stroke="#C88558" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+
+      <!-- Warm, Approachable &amp; Confident Smile -->
+      <path d="M198 126 Q210 137 222 126" stroke="#991B1B" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+      <!-- Subtle Smile Accent Creases -->
+      <path d="M196 124 Q194 127 197 129" stroke="#C88558" stroke-width="1" stroke-linecap="round"/>
+      <path d="M224 124 Q226 127 223 129" stroke="#C88558" stroke-width="1" stroke-linecap="round"/>
+    </g>
+  </g>
+</svg>

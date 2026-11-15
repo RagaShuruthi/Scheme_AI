@@ -1,0 +1,17 @@
+{
+  "name": "citizen-saarthi",
+  "version": "1.0.0",
+  "description": "Citizen Saarthi - Unified Indian Citizen Knowledge Portal",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "citizen-saarthi",
+    "schemesaarthi",
+    "lawsaarthi",
+    "portal"
+  ],
+  "author": "Citizen Saarthi Team",
+  "license": "MIT"
+}

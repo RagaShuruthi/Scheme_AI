@@ -1,0 +1,252 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 410" fill="none" class="about-man-svg" id="aboutManSvg" role="img" aria-label="Animated Saarthi Guide explaining schemes and laws">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="abSkin" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FDDEC4"/>
+      <stop offset="60%" stop-color="#F2BA94"/>
+      <stop offset="100%" stop-color="#E19A6C"/>
+    </linearGradient>
+
+    <linearGradient id="abJacket" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2D68C4"/>
+      <stop offset="60%" stop-color="#1B4282"/>
+      <stop offset="100%" stop-color="#102B50"/>
+    </linearGradient>
+
+    <linearGradient id="abSaffron" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFC266"/>
+      <stop offset="100%" stop-color="#F2A541"/>
+    </linearGradient>
+
+    <linearGradient id="abGold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FDE047"/>
+      <stop offset="100%" stop-color="#EAB308"/>
+    </linearGradient>
+
+    <linearGradient id="abBookCover" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+
+    <filter id="abSoftGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <style>
+      @keyframes abGentleFloat {
+        0%, 100% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-8px);
+        }
+      }
+
+      @keyframes abWaveArm {
+        0%, 100% {
+          transform: rotate(0deg);
+        }
+        25% {
+          transform: rotate(-16deg);
+        }
+        50% {
+          transform: rotate(6deg);
+        }
+        75% {
+          transform: rotate(-10deg);
+        }
+      }
+
+      @keyframes abHeadTilt {
+        0%, 100% {
+          transform: rotate(0deg);
+        }
+        50% {
+          transform: rotate(2.5deg);
+        }
+      }
+
+      @keyframes abHaloPulse {
+        0%, 100% {
+          transform: scale(1);
+          opacity: 0.28;
+        }
+        50% {
+          transform: scale(1.08);
+          opacity: 0.45;
+        }
+      }
+
+      .ab-all {
+        animation: abGentleFloat 3.8s ease-in-out infinite;
+        transform-origin: 170px 380px;
+      }
+
+      .ab-head {
+        animation: abHeadTilt 3s ease-in-out infinite;
+        transform-origin: 170px 145px;
+      }
+
+      .ab-arm-right {
+        animation: abWaveArm 2.4s ease-in-out infinite;
+        transform-origin: 228px 185px;
+      }
+
+      .ab-halo {
+        animation: abHaloPulse 3s ease-in-out infinite;
+        transform-origin: 170px 200px;
+      }
+    </style>
+  </defs>
+
+  <!-- Glowing Aura Circle behind Saarthi -->
+  <circle class="ab-halo" cx="170" cy="190" r="120" fill="url(#abSaffron)" filter="url(#abSoftGlow)" opacity="0.25"/>
+
+  <!-- Top Puppet Crossbar & Strings (Subtle marionette cue) -->
+  <g opacity="0.6">
+    <rect x="120" y="8" width="100" height="7" rx="3" fill="#8B5A2B"/>
+    <circle cx="170" cy="11.5" r="2.5" fill="#F2A541"/>
+    <line x1="135" y1="15" x2="105" y2="210" stroke="#94A3B8" stroke-width="1" stroke-dasharray="3 2"/>
+    <line x1="170" y1="15" x2="170" y2="80" stroke="#F2A541" stroke-width="1.2"/>
+    <line x1="205" y1="15" x2="250" y2="155" stroke="#94A3B8" stroke-width="1" stroke-dasharray="3 2"/>
+  </g>
+
+  <!-- Ground Shadow -->
+  <ellipse cx="170" cy="392" rx="75" ry="10" fill="#0A1628" opacity="0.3" filter="url(#abSoftGlow)"/>
+
+  <!-- Character Group -->
+  <g class="ab-all">
+
+    <!-- LEGS & SHOES -->
+    <!-- Trousers / Slacks -->
+    <path d="M145 285 L138 365 L160 365 L165 285 Z" fill="#1E293B"/>
+    <path d="M175 285 L180 365 L202 365 L195 285 Z" fill="#1E293B"/>
+    <!-- Puppet Knee Joints -->
+    <circle cx="150" cy="325" r="5" fill="#F2A541" stroke="#102B50" stroke-width="1.5"/>
+    <circle cx="190" cy="325" r="5" fill="#F2A541" stroke="#102B50" stroke-width="1.5"/>
+    <!-- Formal Shoes with Saffron Accent -->
+    <path d="M132 365 C132 360 152 358 162 365 L165 378 L124 378 C120 378 120 370 132 365 Z" fill="#0F172A"/>
+    <line x1="126" y1="378" x2="164" y2="378" stroke="#F2A541" stroke-width="2"/>
+    <path d="M178 365 C178 360 198 358 208 365 L216 378 L175 378 C171 378 171 370 178 365 Z" fill="#0F172A"/>
+    <line x1="176" y1="378" x2="214" y2="378" stroke="#F2A541" stroke-width="2"/>
+
+    <!-- TORSO & SMART WAISTCOAT / NEHRU JACKET -->
+    <!-- White Kurta / Shirt base -->
+    <path d="M135 175 L205 175 L202 292 L138 292 Z" fill="#FFFFFF"/>
+    <!-- Royal Blue Waistcoat / Bandhgala -->
+    <path d="M135 175 L160 190 L160 288 L138 288 Z" fill="url(#abJacket)"/>
+    <path d="M205 175 L180 190 L180 288 L202 288 Z" fill="url(#abJacket)"/>
+    <!-- Golden Buttons -->
+    <circle cx="170" cy="205" r="3" fill="url(#abGold)"/>
+    <circle cx="170" cy="225" r="3" fill="url(#abGold)"/>
+    <circle cx="170" cy="245" r="3" fill="url(#abGold)"/>
+    <circle cx="170" cy="265" r="3" fill="url(#abGold)"/>
+    <!-- Saffron Pocket Square -->
+    <polygon points="144,212 154,206 156,214 146,216" fill="url(#abSaffron)"/>
+    <!-- Citizen Saarthi Gold Emblem Pin -->
+    <circle cx="192" cy="214" r="5" fill="url(#abGold)"/>
+    <path d="M192 211 L194 214 L190 214 Z" fill="#102B50"/>
+
+    <!-- LEFT ARM: Holding Constitution & Citizen Book -->
+    <g>
+      <!-- Upper arm -->
+      <path d="M135 180 L108 220 L122 225 L144 190 Z" fill="url(#abJacket)"/>
+      <!-- Elbow joint -->
+      <circle cx="115" cy="222" r="6" fill="#F2A541" stroke="#102B50" stroke-width="1.5"/>
+      <!-- Forearm holding book -->
+      <path d="M115 222 L110 265 L126 265 L130 228 Z" fill="#FFFFFF"/>
+      <!-- Hand -->
+      <circle cx="118" cy="272" r="8" fill="url(#abSkin)"/>
+
+      <!-- Citizen Law & Scheme Book -->
+      <g transform="translate(85, 240) rotate(-6)">
+        <rect x="0" y="0" width="45" height="60" rx="4" fill="url(#abBookCover)" stroke="#F2A541" stroke-width="1.5"/>
+        <line x1="8" y1="0" x2="8" y2="60" stroke="#F2A541" stroke-width="1.5"/>
+        <!-- Golden Ashoka Chakra Spoke motif -->
+        <circle cx="26" cy="25" r="10" stroke="#F2A541" stroke-width="1.2" stroke-dasharray="2 1"/>
+        <text x="26" y="44" font-family="system-ui" font-size="5" font-weight="900" fill="#F2A541" text-anchor="middle">CITIZEN</text>
+        <text x="26" y="52" font-family="system-ui" font-size="4.5" font-weight="700" fill="#FAF9F6" text-anchor="middle">SAARTHI</text>
+      </g>
+    </g>
+
+    <!-- RIGHT ARM: Cheerful Welcoming Wave -->
+    <g class="ab-arm-right">
+      <!-- Upper arm -->
+      <path d="M205 180 L234 215 L222 224 L196 190 Z" fill="url(#abJacket)"/>
+      <!-- Elbow joint -->
+      <circle cx="228" cy="220" r="6" fill="#F2A541" stroke="#102B50" stroke-width="1.5"/>
+      <!-- Forearm raised upwards in friendly wave -->
+      <path d="M228 220 L252 170 L266 178 L240 228 Z" fill="#FFFFFF"/>
+      <!-- Wrist joint -->
+      <circle cx="258" cy="172" r="4" fill="#E19A6C"/>
+
+      <!-- Hand Waving Cheerfully -->
+      <g transform="translate(254, 150)">
+        <!-- Palm -->
+        <circle cx="10" cy="14" r="9" fill="url(#abSkin)"/>
+        <!-- 4 Fingers waving up -->
+        <rect x="3" y="-2" width="4.5" height="15" rx="2.2" fill="url(#abSkin)"/>
+        <rect x="8.5" y="-6" width="4.5" height="18" rx="2.2" fill="url(#abSkin)"/>
+        <rect x="14" y="-4" width="4.5" height="16" rx="2.2" fill="url(#abSkin)"/>
+        <rect x="19.5" y="0" width="4" height="12" rx="2" fill="url(#abSkin)"/>
+        <!-- Thumb -->
+        <rect x="-3" y="10" width="9" height="5" rx="2.5" fill="url(#abSkin)" transform="rotate(-30)"/>
+        <!-- Joy sparkles near hand -->
+        <path d="M12 -12 L14 -9 L17 -7 L14 -5 L12 -2 L10 -5 L7 -7 L10 -9 Z" fill="#F2A541"/>
+        <circle cx="26" cy="-8" r="1.5" fill="#F2A541"/>
+      </g>
+    </g>
+
+    <!-- NECK & COLLAR -->
+    <rect x="163" y="150" width="14" height="26" rx="3" fill="#E19A6C"/>
+    <!-- Kurta Mandarin Collar -->
+    <path d="M156 168 C164 174 176 174 184 168 L187 176 C176 182 164 182 153 176 Z" fill="#FFFFFF"/>
+
+    <!-- HEAD (EXPRESSIVE, WARM & FRIENDLY SAARTHI) -->
+    <g class="ab-head">
+      <!-- Face shape -->
+      <path d="M148 100 C148 70 192 70 192 100 C192 128 186 150 170 150 C154 150 148 128 148 100 Z" fill="url(#abSkin)"/>
+      <!-- Marionette Jaw line -->
+      <path d="M156 132 L156 142 L184 142 L184 132" stroke="#C88558" stroke-width="1" stroke-dasharray="2 1" fill="none"/>
+      <!-- Ears with puppet pegs -->
+      <ellipse cx="146" cy="108" rx="4" ry="7" fill="url(#abSkin)"/>
+      <ellipse cx="194" cy="108" rx="4" ry="7" fill="url(#abSkin)"/>
+
+      <!-- Stylish Modern Hair -->
+      <path d="M145 95 C142 66 160 54 173 53 C188 52 199 64 196 86 C194 92 198 94 193 98 C188 86 182 82 170 82 C158 82 150 88 145 95 Z" fill="#14171F"/>
+      <!-- Hair detail -->
+      <path d="M160 58 Q170 50 178 57" stroke="#2D3748" stroke-width="3" stroke-linecap="round" fill="none"/>
+
+      <!-- Friendly Eyes (Warm, smiling, intelligent look) -->
+      <!-- Eyebrows -->
+      <path d="M154 94 Q160 90 166 93" stroke="#14171F" stroke-width="2.2" stroke-linecap="round"/>
+      <path d="M174 93 Q180 90 186 94" stroke="#14171F" stroke-width="2.2" stroke-linecap="round"/>
+      <!-- Smart modern round glasses with gold bridge -->
+      <circle cx="160" cy="103" r="8" stroke="#102B50" stroke-width="1.8" fill="rgba(255,255,255,0.4)"/>
+      <circle cx="180" cy="103" r="8" stroke="#102B50" stroke-width="1.8" fill="rgba(255,255,255,0.4)"/>
+      <line x1="168" y1="102" x2="172" y2="102" stroke="#F2A541" stroke-width="2"/>
+      <!-- Eyeballs smiling -->
+      <circle cx="160" cy="103" r="3.2" fill="#102B50"/>
+      <circle cx="161" cy="101.5" r="1" fill="#FFFFFF"/>
+      <circle cx="180" cy="103" r="3.2" fill="#102B50"/>
+      <circle cx="181" cy="101.5" r="1" fill="#FFFFFF"/>
+
+      <!-- Nose -->
+      <path d="M170 102 L168 113 L172 113" stroke="#C88558" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+
+      <!-- Big Warm, Welcoming Smile -->
+      <path d="M160 122 Q170 132 180 122" stroke="#991B1B" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+      <!-- Cheerful rosy cheeks -->
+      <circle cx="152" cy="116" r="3.5" fill="#E11D48" opacity="0.25"/>
+      <circle cx="188" cy="116" r="3.5" fill="#E11D48" opacity="0.25"/>
+    </g>
+
+    <!-- Floating Badge: "I AM YOUR SAARTHI" -->
+    <g transform="translate(68, 140)">
+      <rect width="84" height="22" rx="11" fill="#FFFFFF" stroke="#F2A541" stroke-width="1.5" filter="url(#abSoftGlow)"/>
+      <circle cx="11" cy="11" r="4" fill="#F2A541"/>
+      <text x="48" y="14" font-family="system-ui, sans-serif" font-weight="800" font-size="7.5" fill="#102B50" text-anchor="middle">HERE TO HELP</text>
+    </g>
+  </g>
+</svg>

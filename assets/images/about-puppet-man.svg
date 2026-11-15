@@ -1,0 +1,362 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 480" fill="none" class="about-man-svg" id="aboutPuppetSvg" role="img" aria-label="Gen-Z Puppet Saarthi with wooden joints &amp; strings explaining schemes &amp; laws">
+  <defs>
+    <!-- Puppet Skin Gradient with Wood/Carved undertone -->
+    <linearGradient id="abPupSkin" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FDDEC4"/>
+      <stop offset="60%" stop-color="#F2BA94"/>
+      <stop offset="100%" stop-color="#DE9768"/>
+    </linearGradient>
+
+    <!-- Wood Joint Texture Gradient -->
+    <linearGradient id="abWoodGrain" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#B87333"/>
+      <stop offset="50%" stop-color="#8B5A2B"/>
+      <stop offset="100%" stop-color="#5C3A1E"/>
+    </linearGradient>
+
+    <!-- Streetwear Varsity Jacket: Royal Blue to Deep Navy -->
+    <linearGradient id="abVarsity" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2D68C4"/>
+      <stop offset="50%" stop-color="#1B4282"/>
+      <stop offset="100%" stop-color="#102B50"/>
+    </linearGradient>
+
+    <!-- Saffron Pop Gradient -->
+    <linearGradient id="abSaffronPop" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFC266"/>
+      <stop offset="100%" stop-color="#F2A541"/>
+    </linearGradient>
+
+    <!-- Sunglasses Tint -->
+    <linearGradient id="abShades" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#F2A541"/>
+    </linearGradient>
+
+    <!-- Sneaker Soles -->
+    <linearGradient id="abSneaker" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="50%" stop-color="#E2E8F0"/>
+      <stop offset="100%" stop-color="#2457A7"/>
+    </linearGradient>
+
+    <!-- Holographic Glow Filter -->
+    <filter id="abHoloFilter" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <style>
+      /* Puppet Groovy &amp; Bobblehead Keyframes */
+      @keyframes abPuppetGroove {
+        0%, 100% {
+          transform: translateY(0px) rotate(0deg);
+        }
+        25% {
+          transform: translateY(-7px) rotate(-1.5deg);
+        }
+        50% {
+          transform: translateY(-2px) rotate(1deg);
+        }
+        75% {
+          transform: translateY(-8px) rotate(1.8deg);
+        }
+      }
+
+      @keyframes abPuppetHeadBob {
+        0%, 100% {
+          transform: rotate(0deg);
+        }
+        25% {
+          transform: rotate(-3.5deg) translateY(-2px);
+        }
+        50% {
+          transform: rotate(2deg) translateY(1px);
+        }
+        75% {
+          transform: rotate(3.5deg) translateY(-1.5px);
+        }
+      }
+
+      @keyframes abPuppetRightArmWave {
+        0%, 100% {
+          transform: rotate(0deg);
+        }
+        25% {
+          transform: rotate(-16deg) translateY(-3px);
+        }
+        50% {
+          transform: rotate(8deg) translateY(2px);
+        }
+        75% {
+          transform: rotate(-10deg);
+        }
+      }
+
+      @keyframes abPuppetLeftArmRest {
+        0%, 100% {
+          transform: rotate(0deg);
+        }
+        50% {
+          transform: rotate(3.5deg);
+        }
+      }
+
+      @keyframes abStringVibe {
+        0%, 100% {
+          opacity: 0.55;
+          transform: scaleY(1);
+        }
+        50% {
+          opacity: 0.8;
+          transform: scaleY(0.97);
+        }
+      }
+
+      .ab-puppet-whole {
+        animation: abPuppetGroove 3.2s ease-in-out infinite;
+        transform-origin: 190px 450px;
+      }
+
+      .ab-puppet-head-group {
+        animation: abPuppetHeadBob 2.8s ease-in-out infinite;
+        transform-origin: 190px 145px;
+      }
+
+      .ab-puppet-right-arm {
+        animation: abPuppetRightArmWave 2.6s ease-in-out infinite;
+        transform-origin: 248px 185px;
+      }
+
+      .ab-puppet-left-arm {
+        animation: abPuppetLeftArmRest 3.6s ease-in-out infinite;
+        transform-origin: 132px 185px;
+      }
+
+      .ab-string {
+        animation: abStringVibe 3.2s ease-in-out infinite;
+        stroke-dasharray: 4 2;
+      }
+    </style>
+  </defs>
+
+  <!-- MARIONETTE WOODEN CROSSBAR &amp; SUSPENSION STRINGS -->
+  <g opacity="0.9">
+    <!-- Main Horizontal Wooden Crossbar -->
+    <rect x="120" y="8" width="140" height="11" rx="4" fill="url(#abWoodGrain)" stroke="#3E2410" stroke-width="1.5"/>
+    <!-- Center Eyelet / Ring -->
+    <circle cx="190" cy="13.5" r="3.5" fill="#F2A541"/>
+    <path d="M190 0 L190 8" stroke="#F2A541" stroke-width="2"/>
+    <!-- String Eyelet Rings on Crossbar -->
+    <circle cx="138" cy="13.5" r="2.5" fill="#D7A178"/>
+    <circle cx="242" cy="13.5" r="2.5" fill="#D7A178"/>
+    <circle cx="190" cy="18" r="2" fill="#D7A178"/>
+
+    <!-- Marionette Strings connecting directly to puppet joints -->
+    <!-- String to Left Arm / Tablet -->
+    <line class="ab-string" x1="138" y1="18" x2="108" y2="250" stroke="#CBD5E1" stroke-width="1.3"/>
+    <!-- Center String to Puppet Head Pin -->
+    <line class="ab-string" x1="190" y1="18" x2="190" y2="72" stroke="#F2A541" stroke-width="1.6"/>
+    <!-- String to Right Waving H&amp; -->
+    <line class="ab-string" x1="242" y1="18" x2="286" y2="175" stroke="#CBD5E1" stroke-width="1.3"/>
+  </g>
+
+  <!-- Ground Shadow under Shoes -->
+  <ellipse cx="190" cy="455" rx="90" ry="12" fill="#102B50" opacity="0.32" filter="url(#abHoloFilter)"/>
+
+  <!-- ========================================================
+       PUPPET BODY GROUP (ARTICULATED WOODEN JOINTS + GEN-Z DRIP)
+       ======================================================== -->
+  <g class="ab-puppet-whole">
+
+    <!-- WOODEN PELVIS BLOCK &amp; HINGES -->
+    <rect x="162" y="295" width="56" height="22" rx="7" fill="#141E2E"/>
+    <!-- Pelvis Wooden Joint Pins -->
+    <circle cx="174" cy="308" r="4.5" fill="#F2A541" stroke="#102B50" stroke-width="1.5"/>
+    <circle cx="206" cy="308" r="4.5" fill="#F2A541" stroke="#102B50" stroke-width="1.5"/>
+
+    <!-- LEFT LEG (Oversized Streetwear Cargo Pants) -->
+    <g>
+      <!-- Thigh -->
+      <path d="M165 308 L158 375 L178 375 L182 308 Z" fill="#1E293B"/>
+      <!-- PUPPET KNEE JOINT PEG (Clearly visible wooden articulation) -->
+      <circle cx="168" cy="375" r="7" fill="#F2A541" stroke="#102B50" stroke-width="2"/>
+      <circle cx="168" cy="375" r="2.5" fill="#FFFFFF"/>
+      <!-- Lower Leg -->
+      <path d="M160 378 L154 430 L176 430 L180 378 Z" fill="#1E293B"/>
+      <!-- Neon Cargo Pocket &amp; Strap -->
+      <rect x="150" y="330" width="13" height="18" rx="3" fill="#F2A541"/>
+      <line x1="156" y1="348" x2="156" y2="362" stroke="#F2A541" stroke-width="1.8"/>
+      <!-- Left Chunky High-Top Sneaker -->
+      <path d="M152 430 C152 425 170 422 182 428 L185 440 L134 444 C130 444 128 452 137 453 L187 453 C192 453 194 446 192 438 Z" fill="url(#abSneaker)"/>
+      <rect x="132" y="448" width="60" height="5" rx="2.5" fill="#F2A541"/>
+      <line x1="148" y1="440" x2="170" y2="437" stroke="#2457A7" stroke-width="2"/>
+    </g>
+
+    <!-- RIGHT LEG -->
+    <g>
+      <!-- Thigh -->
+      <path d="M198 308 L204 375 L224 375 L215 308 Z" fill="#1E293B"/>
+      <!-- PUPPET KNEE JOINT PEG -->
+      <circle cx="214" cy="375" r="7" fill="#F2A541" stroke="#102B50" stroke-width="2"/>
+      <circle cx="214" cy="375" r="2.5" fill="#FFFFFF"/>
+      <!-- Lower Leg -->
+      <path d="M206 378 L212 430 L234 430 L224 378 Z" fill="#1E293B"/>
+      <!-- Neon Cargo Strap -->
+      <line x1="220" y1="330" x2="226" y2="356" stroke="#F2A541" stroke-width="2"/>
+      <!-- Right Chunky Sneaker -->
+      <path d="M210 430 C210 425 228 422 240 428 L244 440 L198 444 C194 444 194 452 201 453 L247 453 C252 453 254 446 250 438 Z" fill="url(#abSneaker)"/>
+      <rect x="198" y="448" width="56" height="5" rx="2.5" fill="#F2A541"/>
+      <line x1="216" y1="440" x2="238" y2="437" stroke="#2457A7" stroke-width="2"/>
+    </g>
+
+    <!-- TORSO: Streetwear Tee + Varsity Bomber Jacket -->
+    <!-- White Streetwear Graphic Tee -->
+    <path d="M150 178 L230 178 L227 302 L153 302 Z" fill="#FAF9F6"/>
+    <!-- Ashoka Dharma Spoke Emblem on Tee -->
+    <circle cx="190" cy="242" r="12" stroke="#2457A7" stroke-width="1.8" stroke-dasharray="2.5 1.5"/>
+    <text x="190" y="246" font-family="system-ui" font-weight="900" font-size="9" fill="#102B50" text-anchor="middle">JUSTICE</text>
+
+    <!-- Open Varsity Bomber Jacket (Royal Blue &amp; Navy) -->
+    <!-- Left Jacket Flap -->
+    <path d="M150 174 L124 200 L132 292 L165 292 L170 200 Z" fill="url(#abVarsity)"/>
+    <!-- Right Jacket Flap -->
+    <path d="M230 174 L256 200 L248 292 L215 292 L210 200 Z" fill="url(#abVarsity)"/>
+    <!-- Saffron Trim Collar -->
+    <path d="M156 172 C174 187 206 187 224 172 L230 180 C210 198 170 198 150 180 Z" fill="url(#abSaffronPop)"/>
+    <!-- Jacket Cuffs / Hem -->
+    <rect x="132" y="288" width="33" height="6" fill="#F2A541"/>
+    <rect x="215" y="288" width="33" height="6" fill="#F2A541"/>
+
+    <!-- Enamel Pins on Jacket Lapel: RTI &amp; SCHEME -->
+    <circle cx="146" cy="218" r="5" fill="#F2A541" stroke="#FFFFFF" stroke-width="1.2"/>
+    <text x="146" y="221" font-family="system-ui" font-size="5" font-weight="900" fill="#102B50" text-anchor="middle">RTI</text>
+    <rect x="141" y="230" width="10" height="10" rx="2.5" fill="#10B981" stroke="#FFFFFF" stroke-width="1"/>
+    <text x="146" y="237.5" font-family="system-ui" font-size="5" font-weight="800" fill="#FFFFFF" text-anchor="middle">LAW</text>
+
+    <!-- LEFT ARM &amp; HOLOGRAPHIC CONSTITUTION TABLET -->
+    <g class="ab-puppet-left-arm">
+      <!-- Upper Arm with Saffron Stripe -->
+      <path d="M135 182 L108 226 L124 231 L146 195 Z" fill="url(#abVarsity)"/>
+      <!-- PUPPET ELBOW JOINT BALL &amp; PEG -->
+      <circle cx="116" cy="228" r="7" fill="#F2A541" stroke="#102B50" stroke-width="2"/>
+      <circle cx="116" cy="228" r="2.5" fill="#FFFFFF"/>
+      <!-- Forearm -->
+      <path d="M116 228 L104 282 L120 282 L128 235 Z" fill="#FAF9F6"/>
+      <!-- Puppet Wrist Peg -->
+      <circle cx="112" cy="282" r="4.5" fill="#DE9768"/>
+      <!-- H&amp; holding Tablet -->
+      <ellipse cx="112" cy="292" rx="8" ry="7" fill="url(#abPupSkin)"/>
+
+      <!-- Glowing Holographic Tablet: Constitution &amp; Schemes -->
+      <g filter="url(#abHoloFilter)" transform="translate(76, 260) rotate(8)">
+        <rect x="0" y="0" width="52" height="70" rx="5" fill="#0A1628" stroke="#38BDF8" stroke-width="1.8"/>
+        <rect x="3" y="3" width="46" height="64" rx="3.5" fill="#0284C7" opacity="0.25"/>
+        <circle cx="26" cy="25" r="12" stroke="#38BDF8" stroke-width="1.3" stroke-dasharray="2.5 1.5"/>
+        <path d="M26 16 L30 23 L22 23 Z" fill="#F2A541"/>
+        <text x="26" y="47" font-family="system-ui" font-weight="900" font-size="6" fill="#38BDF8" text-anchor="middle">SCHEMES</text>
+        <text x="26" y="55" font-family="system-ui" font-weight="800" font-size="5" fill="#FAF9F6" text-anchor="middle">&amp; LAWS</text>
+        <circle cx="26" cy="62" r="2" fill="#38BDF8"/>
+      </g>
+    </g>
+
+    <!-- RIGHT ARM &amp; CHEERFUL POINTING/WAVING PUPPET H&amp; -->
+    <g class="ab-puppet-right-arm">
+      <!-- Upper Arm with Saffron Sleeve Accent -->
+      <path d="M242 182 L274 222 L260 231 L230 195 Z" fill="url(#abVarsity)"/>
+      <line x1="239" y1="189" x2="269" y2="225" stroke="#F2A541" stroke-width="2.5"/>
+      <!-- PUPPET ELBOW JOINT BALL &amp; PEG -->
+      <circle cx="267" cy="226" r="7" fill="#F2A541" stroke="#102B50" stroke-width="2"/>
+      <circle cx="267" cy="226" r="2.5" fill="#FFFFFF"/>
+      <!-- Forearm raised upwards towards speech bubble -->
+      <path d="M267 226 L290 185 L303 194 L278 235 Z" fill="#FAF9F6"/>
+      <!-- Smartwatch with glowing dot -->
+      <rect x="285" y="191" width="9" height="12" rx="2.5" fill="#1E293B" transform="rotate(-35 285 191)"/>
+      <circle cx="289" cy="197" r="2.5" fill="#10B981"/>
+
+      <!-- Expressive Puppet H&amp; in Cheerful Pointing / Vibe Gesture -->
+      <g transform="translate(293, 172) rotate(-18)">
+        <!-- Palm with wooden joint tone -->
+        <circle cx="9" cy="11" r="9" fill="url(#abPupSkin)"/>
+        <!-- Index Finger (pointing playfully up towards the speech quote!) -->
+        <rect x="7" y="-12" width="6" height="20" rx="3" fill="url(#abPupSkin)"/>
+        <!-- Curled Puppet Fingers -->
+        <circle cx="14" cy="11" r="4.5" fill="#DE9768"/>
+        <circle cx="12" cy="16" r="4" fill="#DE9768"/>
+        <!-- Thumb -->
+        <rect x="-3" y="5" width="10" height="5" rx="2.5" fill="url(#abPupSkin)" transform="rotate(-25)"/>
+        <!-- Golden Sparkles near fingertip -->
+        <path d="M10 -18 L12 -14 L16 -12 L12 -10 L10 -6 L8 -10 L4 -12 L8 -14 Z" fill="#F2A541"/>
+      </g>
+    </g>
+
+    <!-- NECK &amp; OVER-EAR WIRELESS HEADPHONES -->
+    <!-- Wooden Neck Pin -->
+    <rect x="183" y="150" width="14" height="28" rx="3.5" fill="#DE9768"/>
+    <circle cx="190" cy="164" r="3.5" fill="#F2A541"/>
+    <!-- Wireless Studio Headphones draped around neck -->
+    <path d="M164 170 C164 146 216 146 216 170" stroke="#102B50" stroke-width="5" stroke-linecap="round" fill="none"/>
+    <rect x="157" y="163" width="10" height="20" rx="4" fill="#F2A541" stroke="#102B50" stroke-width="1.8"/>
+    <rect x="213" y="163" width="10" height="20" rx="4" fill="#F2A541" stroke="#102B50" stroke-width="1.8"/>
+
+    <!-- ========================================================
+         PUPPET HEAD (PUPPET JAW PEGS, SHADES, COOL MESSY HAIR)
+         ======================================================== -->
+    <g class="ab-puppet-head-group">
+      <!-- Head Base (Stylized Wooden Puppet Shape) -->
+      <path d="M165 96 C165 66 215 66 215 96 C215 125 210 150 190 150 C170 150 165 125 165 96 Z" fill="url(#abPupSkin)"/>
+
+      <!-- MARIONETTE JAW CUTOUT &amp; WOODEN HINGE PEGS (Unmistakable Puppet Mark!) -->
+      <path d="M174 130 L174 142 L206 142 L206 130" stroke="#C88558" stroke-width="1.5" stroke-dasharray="2 1" fill="none"/>
+      <!-- Left &amp; Right Wooden Jaw Hinge Pegs -->
+      <circle cx="170" cy="136" r="2.2" fill="#F2A541"/>
+      <circle cx="210" cy="136" r="2.2" fill="#F2A541"/>
+
+      <!-- Ears with Gold Huggie Ring -->
+      <ellipse cx="163" cy="106" rx="4.5" ry="7" fill="url(#abPupSkin)"/>
+      <ellipse cx="217" cy="106" rx="4.5" ry="7" fill="url(#abPupSkin)"/>
+      <circle cx="161" cy="111" r="3" stroke="#F2A541" stroke-width="1.8" fill="none"/>
+
+      <!-- Trendy Gen-Z Messy Textured Haircut with Fade -->
+      <path d="M162 90 C159 58 180 48 195 46 C212 44 224 57 221 80 C219 86 223 90 217 93 C212 80 204 76 192 76 C179 76 169 82 165 92 Z" fill="#14171F"/>
+      <!-- Textured hair str&amp;s -->
+      <path d="M177 50 Q186 41 198 48 Q207 39 214 52" stroke="#222735" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+      <path d="M167 66 Q178 55 190 62" stroke="#222735" stroke-width="2.8" stroke-linecap="round" fill="none"/>
+
+      <!-- COOL GEN-Z SLIM SUNGLASSES / SHADES (Saffron Mirror Glare) -->
+      <g transform="translate(0, 1)">
+        <rect x="167" y="96" width="20" height="12" rx="3.5" fill="url(#abShades)" stroke="#102B50" stroke-width="1.8"/>
+        <rect x="193" y="96" width="20" height="12" rx="3.5" fill="url(#abShades)" stroke="#102B50" stroke-width="1.8"/>
+        <line x1="187" y1="100" x2="193" y2="100" stroke="#F2A541" stroke-width="2"/>
+        <!-- Mirror Specular Glare -->
+        <line x1="170" y1="105" x2="181" y2="98" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" opacity="0.85"/>
+        <line x1="196" y1="105" x2="207" y2="98" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" opacity="0.85"/>
+      </g>
+
+      <!-- Expressive Eyebrows -->
+      <path d="M169 89 Q177 84 185 88" stroke="#14171F" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M195 87 Q204 82 211 89" stroke="#14171F" stroke-width="2.5" stroke-linecap="round"/>
+
+      <!-- Nose -->
+      <path d="M190 106 L188 115 L192 115" stroke="#C88558" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+
+      <!-- Charismatic Confident Smirk / Smile -->
+      <path d="M179 123 Q191 132 202 123" stroke="#782020" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+      <circle cx="205" cy="122" r="1.5" fill="#D67D73"/>
+    </g>
+
+    <!-- Floating Gen-Z Badge: "I AM YOUR SAARTHI" -->
+    <g transform="translate(62, 160)">
+      <rect width="84" height="22" rx="11" fill="#102B50" stroke="#F2A541" stroke-width="1.5"/>
+      <circle cx="11" cy="11" r="3.5" fill="#F2A541"/>
+      <text x="49" y="14" font-family="system-ui, sans-serif" font-weight="900" font-size="7.5" fill="#FAF9F6" text-anchor="middle">YOUR SAARTHI</text>
+    </g>
+
+    <!-- Floating Badge: "NO CAP 100%" -->
+    <g transform="translate(262, 125)">
+      <rect width="70" height="20" rx="10" fill="#FFFFFF" stroke="#2457A7" stroke-width="1.5"/>
+      <text x="35" y="13" font-family="system-ui, sans-serif" font-weight="900" font-size="7" fill="#2457A7" text-anchor="middle">NO CAP 100%</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,353 @@
+/* ==========================================================================
+   Citizen Saarthi - Advanced Interactive Animations & Motion System
+   ========================================================================== */
+
+/* 1. Floating Organic Keyframes */
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(0.6deg);
+  }
+}
+
+@keyframes floatReverse {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(10px) rotate(-0.6deg);
+  }
+}
+
+@keyframes floatGentle {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-4px, -8px);
+  }
+}
+
+/* 2. Pulse & Radar Rings */
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(242, 165, 65, 0.45);
+  }
+  50% {
+    box-shadow: 0 0 0 14px rgba(242, 165, 65, 0);
+  }
+}
+
+@keyframes pulseBlue {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(36, 87, 167, 0.35);
+  }
+  50% {
+    box-shadow: 0 0 0 16px rgba(36, 87, 167, 0);
+  }
+}
+
+@keyframes radarExpand {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
+
+/* 3. Laser Beam Flow along Progress Track */
+@keyframes laserBeamMove {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* 4. Text Shimmer / Gradient Flow */
+@keyframes textShimmerFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* 5. Ripple Wave on Click */
+@keyframes rippleWave {
+  0% {
+    transform: scale(0);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(3.5);
+    opacity: 0;
+  }
+}
+
+/* 6. Rotating Ambient Halo */
+@keyframes spinSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Utility Animation Classes */
+.floating-element-1 {
+  animation: floatSlow 6s ease-in-out infinite;
+}
+
+.floating-element-2 {
+  animation: floatReverse 7s ease-in-out infinite 0.5s;
+}
+
+.floating-gentle {
+  animation: floatGentle 5s ease-in-out infinite;
+}
+
+.pulse-saffron {
+  animation: pulseGlow 2.5s infinite;
+}
+
+.pulse-blue {
+  animation: pulseBlue 2.5s infinite;
+}
+
+/* Dynamic Interactive Laser Connecting Track */
+.steps-connecting-line {
+  background: linear-gradient(
+    90deg, 
+    rgba(36, 87, 167, 0.2) 0%, 
+    #2457A7 30%, 
+    #F2A541 50%, 
+    #2457A7 70%, 
+    rgba(36, 87, 167, 0.2) 100%
+  ) !important;
+  background-size: 200% 100% !important;
+  animation: laserBeamMove 3.5s linear infinite !important;
+  height: 3px !important;
+  border-radius: 4px;
+}
+
+/* Step Number Radar Aura */
+.step-number-wrap::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  border-radius: inherit;
+  border: 2px solid currentColor;
+  opacity: 0.4;
+  animation: radarExpand 2.4s cubic-bezier(0.25, 1, 0.5, 1) infinite;
+  pointer-events: none;
+}
+
+/* 3D Tilt Card Container & Specular Glare */
+.tilt-card {
+  transform-style: preserve-3d;
+  will-change: transform;
+  transition: transform 0.2s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.3s ease;
+  position: relative;
+}
+
+.card-glare {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background: radial-gradient(circle 350px at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255, 255, 255, 0.18), transparent 80%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+}
+
+.tilt-card:hover .card-glare {
+  opacity: 1;
+}
+
+.platform-card-law .card-glare {
+  background: radial-gradient(circle 350px at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(252, 211, 77, 0.22), transparent 80%);
+}
+
+/* Interactive Click Ripple */
+.cs-ripple {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  background: rgba(255, 255, 255, 0.4);
+  transform: translate(-50%, -50%);
+  animation: rippleWave 0.65s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+  z-index: 100;
+}
+
+/* Interactive Cursor Spotlight Glow */
+#cursorFollowerSpotlight {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 480px;
+  height: 480px;
+  pointer-events: none;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(36, 87, 167, 0.04) 0%, rgba(242, 165, 65, 0.02) 40%, transparent 70%);
+  transform: translate(-50%, -50%);
+  transition: width 0.3s, height 0.3s, opacity 0.3s;
+  z-index: 0;
+  mix-blend-mode: multiply;
+  will-change: transform;
+}
+
+/* Canvas Particles Layer */
+#heroParticlesCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Shimmer Headline Effect */
+.shimmer-headline {
+  background: linear-gradient(135deg, #102B50 0%, #2457A7 50%, #102B50 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textShimmerFlow 6s ease-in-out infinite;
+}
+
+/* Platform View Mode Controller Buttons */
+.view-modes-control {
+  display: inline-flex;
+  align-items: center;
+  background: #EFF3F9;
+  padding: 4px;
+  border-radius: 9999px;
+  border: 1px solid rgba(16, 43, 80, 0.08);
+  margin-bottom: 32px;
+  gap: 4px;
+}
+
+.view-mode-pill {
+  padding: 8px 18px;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--color-grey);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+}
+
+.view-mode-pill:hover {
+  color: var(--color-navy);
+}
+
+.view-mode-pill.active {
+  background: var(--color-white);
+  color: var(--color-navy);
+  box-shadow: 0 2px 10px rgba(16, 43, 80, 0.1);
+}
+
+/* View Mode State Adjustments */
+.platforms-grid.mode-scheme-focus .platform-card-scheme {
+  transform: scale(1.02);
+  box-shadow: 0 24px 60px -8px rgba(36, 87, 167, 0.28);
+  border-color: var(--color-royal) !important;
+  opacity: 1 !important;
+}
+
+.platforms-grid.mode-scheme-focus .platform-card-law {
+  opacity: 0.85 !important;
+  transform: scale(0.98);
+}
+
+.platforms-grid.mode-law-focus .platform-card-law {
+  transform: scale(1.02);
+  box-shadow: 0 24px 60px -8px rgba(245, 158, 11, 0.38);
+  border-color: #FCD34D !important;
+  opacity: 1 !important;
+}
+
+.platforms-grid.mode-law-focus .platform-card-scheme {
+  opacity: 0.85 !important;
+  transform: scale(0.98);
+}
+
+/* Magnetic Button Base */
+.magnetic-btn {
+  will-change: transform;
+  transition: transform 0.2s cubic-bezier(0.25, 1, 0.5, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animated Number Count Up styling */
+.stat-number.counting {
+  display: inline-block;
+  transition: all 0.5s ease-out;
+}
+
+/* Puppet Man Click & Wobble Effect */
+@keyframes puppetWobbleClick {
+  0% { transform: scale(1) rotate(0deg); }
+  25% { transform: scale(1.08) translateY(-14px) rotate(-4deg); }
+  50% { transform: scale(1.04) translateY(-4px) rotate(4deg); }
+  75% { transform: scale(1.02) translateY(-8px) rotate(-2deg); }
+  100% { transform: scale(1) translateY(0) rotate(0deg); }
+}
+
+.puppet-wobble-active {
+  animation: puppetWobbleClick 0.65s cubic-bezier(0.25, 1, 0.5, 1) !important;
+}
+
+/* Fail-safe visibility: all content is always fully visible */
+.reveal-on-scroll {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.reveal-on-scroll.is-visible {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+/* Ensure platform cards are always visible */
+.platform-card, .step-card, .why-card, .awareness-card {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  #cursorFollowerSpotlight, #heroParticlesCanvas {
+    display: none !important;
+  }
+}

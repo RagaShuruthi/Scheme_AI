@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 280" fill="none">
+  <defs>
+    <linearGradient id="schemeBg" x1="0" y1="0" x2="420" y2="280" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F4F8FD"/>
+      <stop offset="100%" stop-color="#E2EEFC"/>
+    </linearGradient>
+    <linearGradient id="schemeBlueGrad" x1="50" y1="50" x2="350" y2="250" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#2457A7"/>
+      <stop offset="100%" stop-color="#102B50"/>
+    </linearGradient>
+    <linearGradient id="saffronGold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFC266"/>
+      <stop offset="100%" stop-color="#F2A541"/>
+    </linearGradient>
+    <filter id="schemeShadow" x="-10%" y="-10%" width="125%" height="125%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#102B50" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="420" height="280" rx="20" fill="url(#schemeBg)"/>
+  
+  <!-- Subtle Grid Pattern -->
+  <g opacity="0.15" stroke="#2457A7" stroke-width="0.75" stroke-dasharray="3 3">
+    <line x1="40" y1="0" x2="40" y2="280"/>
+    <line x1="120" y1="0" x2="120" y2="280"/>
+    <line x1="200" y1="0" x2="200" y2="280"/>
+    <line x1="280" y1="0" x2="280" y2="280"/>
+    <line x1="360" y1="0" x2="360" y2="280"/>
+    <line x1="0" y1="60" x2="420" y2="60"/>
+    <line x1="0" y1="140" x2="420" y2="140"/>
+    <line x1="0" y1="220" x2="420" y2="220"/>
+  </g>
+
+  <!-- Main Central Card: Government Welfare Scheme Portal -->
+  <g transform="translate(70, 35)" filter="url(#schemeShadow)">
+    <rect width="280" height="190" rx="16" fill="#FFFFFF" stroke="#D1E2F6" stroke-width="1.5"/>
+    
+    <!-- Top Header bar -->
+    <rect width="280" height="38" rx="16" fill="url(#schemeBlueGrad)"/>
+    <rect y="26" width="280" height="12" fill="url(#schemeBlueGrad)"/>
+    
+    <!-- Header items -->
+    <circle cx="24" cy="19" r="6" fill="#F2A541"/>
+    <rect x="38" y="15" width="80" height="8" rx="4" fill="#FFFFFF" opacity="0.9"/>
+    <rect x="220" y="14" width="44" height="10" rx="5" fill="#FFFFFF" opacity="0.25"/>
+
+    <!-- Content Sections inside Portal -->
+    <!-- Direct Benefit Transfer (DBT) Widget -->
+    <g transform="translate(18, 52)">
+      <rect width="112" height="60" rx="10" fill="#F4F8FD" stroke="#E2E8F0"/>
+      <circle cx="22" cy="24" r="10" fill="#F2A541" fill-opacity="0.2"/>
+      <text x="22" y="28" text-anchor="middle" font-family="system-ui" font-weight="700" font-size="12" fill="#F2A541">₹</text>
+      <text x="38" y="23" font-family="system-ui" font-size="9" font-weight="600" fill="#687386">DBT Transfer</text>
+      <text x="38" y="37" font-family="system-ui" font-size="12" font-weight="800" fill="#102B50">Direct in Bank</text>
+      <rect x="12" y="44" width="88" height="4" rx="2" fill="#E2EEFC"/>
+      <rect x="12" y="44" width="62" height="4" rx="2" fill="#2457A7"/>
+    </g>
+
+    <!-- Eligibility Check Badge -->
+    <g transform="translate(148, 52)">
+      <rect width="114" height="60" rx="10" fill="#F0FDF4" stroke="#BBF7D0"/>
+      <circle cx="22" cy="24" r="10" fill="#10B981" fill-opacity="0.2"/>
+      <path d="M19 24 L22 27 L27 21" stroke="#10B981" stroke-width="2" stroke-linecap="round"/>
+      <text x="38" y="23" font-family="system-ui" font-size="9" font-weight="600" fill="#047857">Status Verified</text>
+      <text x="38" y="37" font-family="system-ui" font-size="11" font-weight="700" fill="#102B50">100% Eligible</text>
+      <rect x="12" y="44" width="90" height="4" rx="2" fill="#D1FAE5"/>
+      <rect x="12" y="44" width="75" height="4" rx="2" fill="#10B981"/>
+    </g>
+
+    <!-- Scheme Category Tags -->
+    <g transform="translate(18, 126)">
+      <rect width="68" height="22" rx="6" fill="#EFF6FF" stroke="#DBEAFE"/>
+      <text x="34" y="15" text-anchor="middle" font-family="system-ui" font-size="9" font-weight="600" fill="#2457A7">Agriculture</text>
+    </g>
+    <g transform="translate(94, 126)">
+      <rect width="64" height="22" rx="6" fill="#EFF6FF" stroke="#DBEAFE"/>
+      <text x="32" y="15" text-anchor="middle" font-family="system-ui" font-size="9" font-weight="600" fill="#2457A7">Education</text>
+    </g>
+    <g transform="translate(166, 126)">
+      <rect width="60" height="22" rx="6" fill="#EFF6FF" stroke="#DBEAFE"/>
+      <text x="30" y="15" text-anchor="middle" font-family="system-ui" font-size="9" font-weight="600" fill="#2457A7">Health</text>
+    </g>
+    <g transform="translate(234, 126)">
+      <rect width="28" height="22" rx="6" fill="#F4F8FD" stroke="#E2E8F0"/>
+      <text x="14" y="15" text-anchor="middle" font-family="system-ui" font-size="9" font-weight="700" fill="#687386">+12</text>
+    </g>
+
+    <!-- Bottom Apply Step Indicator -->
+    <g transform="translate(18, 160)">
+      <rect width="244" height="18" rx="6" fill="#FAF9F6"/>
+      <text x="12" y="13" font-family="system-ui" font-size="9" font-weight="600" fill="#687386">Application Step 1 of 3: Verification with Aadhaar & Jan Dhan</text>
+    </g>
+  </g>
+
+  <!-- Floating Saffron Direct Assistance Coin / Seal -->
+  <g transform="translate(40, 160)" filter="url(#schemeShadow)">
+    <circle cx="24" cy="24" r="22" fill="url(#saffronGold)"/>
+    <circle cx="24" cy="24" r="18" stroke="#FFFFFF" stroke-width="1.5" stroke-dasharray="3 2"/>
+    <text x="24" y="30" text-anchor="middle" font-family="system-ui" font-weight="800" font-size="18" fill="#FFFFFF">₹</text>
+  </g>
+
+  <!-- Floating Central/State Gov Seal -->
+  <g transform="translate(325, 170)" filter="url(#schemeShadow)">
+    <circle cx="24" cy="24" r="22" fill="#2457A7"/>
+    <circle cx="24" cy="24" r="18" stroke="#F2A541" stroke-width="1.5"/>
+    <path d="M24 14 L29 28 L19 28 Z" fill="#F2A541"/>
+    <circle cx="24" cy="24" r="3" fill="#FFFFFF"/>
+  </g>
+</svg>

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" fill="none">
+  <rect width="320" height="200" rx="16" fill="#FDFBF7"/>
+  <!-- Decorative arcs -->
+  <circle cx="160" cy="100" r="85" stroke="#F2A541" stroke-opacity="0.12" stroke-width="1.5" stroke-dasharray="4 4"/>
+  
+  <!-- Financial DBT and Growth Vector Artwork -->
+  <g transform="translate(60, 25)">
+    <!-- Welfare Card Base -->
+    <rect x="25" y="15" width="150" height="95" rx="12" fill="#FFFFFF" stroke="#FDE68A" stroke-width="1.5"/>
+    <!-- Card Chip -->
+    <rect x="42" y="32" width="22" height="18" rx="4" fill="#F2A541" fill-opacity="0.3" stroke="#F2A541"/>
+    <!-- Card Numbers -->
+    <rect x="42" y="62" width="60" height="6" rx="3" fill="#E2E8F0"/>
+    <rect x="42" y="74" width="40" height="5" rx="2.5" fill="#E2E8F0"/>
+    <circle cx="150" cy="74" r="10" fill="#2457A7" fill-opacity="0.8"/>
+    <circle cx="160" cy="74" r="10" fill="#F2A541" fill-opacity="0.8"/>
+  </g>
+
+  <!-- Floating Coins and Direct Benefit Transfer Indicators -->
+  <g transform="translate(190, 85)">
+    <circle cx="25" cy="25" r="22" fill="#F2A541"/>
+    <circle cx="25" cy="25" r="18" stroke="#FFFFFF" stroke-width="1.5" stroke-dasharray="3 2"/>
+    <text x="25" y="32" text-anchor="middle" font-family="system-ui" font-weight="800" font-size="18" fill="#FFFFFF">₹</text>
+  </g>
+  <g transform="translate(45, 95)">
+    <circle cx="20" cy="20" r="18" fill="#2457A7"/>
+    <path d="M15 20 L19 24 L26 16" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round"/>
+  </g>
+
+  <!-- Growth Bar / Step Up Graph -->
+  <g transform="translate(85, 138)">
+    <rect x="0" y="24" width="28" height="20" rx="4" fill="#2457A7" fill-opacity="0.3"/>
+    <rect x="38" y="16" width="28" height="28" rx="4" fill="#2457A7" fill-opacity="0.6"/>
+    <rect x="76" y="8" width="28" height="36" rx="4" fill="#2457A7"/>
+    <rect x="114" y="0" width="28" height="44" rx="4" fill="#F2A541"/>
+  </g>
+</svg>

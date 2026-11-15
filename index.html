@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Citizen Saarthi – Unified Indian Citizen Knowledge Portal</title>
+  <meta name="description" content="Know Your Rights. Discover Your Opportunities. A unified entry point connecting SchemeSaarthi for welfare schemes and LawSaarthi for Indian legal rights.">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+  <!-- GSAP & ScrollTrigger CDN (Subtle Premium Motion) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+<body>
+
+  <!-- =========================================================================
+       NAVIGATION BAR (Sticky & Compact on Scroll)
+       ========================================================================= -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <!-- Left: Logo & Emblem -->
+      <a href="#home" class="brand" aria-label="Citizen Saarthi Homepage">
+        <img src="assets/images/logo.svg" alt="Citizen Saarthi Emblem" class="brand-emblem" width="40" height="40">
+        <div class="brand-info">
+          <span class="brand-title">Citizen<span>Saarthi</span></span>
+          <span class="brand-tagline">Portal of Bharat</span>
+        </div>
+      </a>
+
+      <!-- Center: Navigation Links -->
+      <nav class="nav-menu-wrap" aria-label="Primary Navigation">
+        <ul class="nav-menu">
+          <li><a href="#home" class="nav-link" data-i18n="nav_home">Home</a></li>
+          <li><a href="#explore-platforms" class="nav-link" data-i18n="nav_platforms">Explore Platforms</a></li>
+          <li><a href="#how-it-works" class="nav-link" data-i18n="nav_how_it_works">How It Works</a></li>
+          <li><a href="#about" class="nav-link" data-i18n="nav_about">About</a></li>
+        </ul>
+      </nav>
+
+      <!-- Right: Search, Language Switcher, Get Started -->
+      <div class="nav-actions">
+        <!-- Quick Search Trigger Button -->
+        <button type="button" class="nav-search-btn" id="navSearchBtn" aria-label="Search schemes and laws">
+          <i data-lucide="search" style="width: 16px; height: 16px;"></i>
+          <span data-i18n="nav_search_placeholder">Search...</span>
+          <kbd>Ctrl+K</kbd>
+        </button>
+
+
+        <!-- Language Selector Dropdown -->
+        <div class="lang-selector-wrap">
+          <button type="button" class="lang-btn" id="langBtn" aria-expanded="false" aria-haspopup="true" aria-label="Select Language">
+            <i data-lucide="globe" style="width: 16px; height: 16px; color: var(--color-royal);"></i>
+            <span id="currentLangLabel">English</span>
+            <i data-lucide="chevron-down" style="width: 14px; height: 14px; opacity: 0.7;"></i>
+          </button>
+          <div class="lang-dropdown" id="langDropdown" role="menu">
+            <button type="button" class="lang-option active" data-lang="en" role="menuitem">English</button>
+            <button type="button" class="lang-option" data-lang="hi" role="menuitem">हिन्दी (Hindi)</button>
+            <button type="button" class="lang-option" data-lang="ta" role="menuitem">தமிழ் (Tamil)</button>
+          </div>
+        </div>
+
+        <!-- Get Started Action Button -->
+        <a href="#explore-platforms" class="btn btn-primary" data-i18n="nav_get_started">Get Started</a>
+
+        <!-- Mobile Drawer Toggle -->
+        <button type="button" class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open mobile menu">
+          <i data-lucide="menu" style="width: 24px; height: 24px;"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-drawer-overlay" id="mobileDrawerOverlay"></div>
+  <aside class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+    <div class="drawer-header">
+      <div class="brand">
+        <img src="assets/images/logo.svg" alt="Citizen Saarthi Emblem" width="32" height="32">
+        <span class="brand-title">Citizen<span>Saarthi</span></span>
+      </div>
+      <button type="button" class="drawer-close-btn" id="drawerCloseBtn" aria-label="Close menu">
+        <i data-lucide="x" style="width: 22px; height: 22px;"></i>
+      </button>
+    </div>
+
+    <ul class="drawer-menu">
+      <li><a href="#home" class="drawer-link"><span data-i18n="nav_home">Home</span> <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i></a></li>
+      <li><a href="#explore-platforms" class="drawer-link"><span data-i18n="nav_platforms">Explore Platforms</span> <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i></a></li>
+      <li><a href="#how-it-works" class="drawer-link"><span data-i18n="nav_how_it_works">How It Works</span> <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i></a></li>
+      <li><a href="#about" class="drawer-link"><span data-i18n="nav_about">About</span> <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i></a></li>
+    </ul>
+
+    <div class="drawer-actions">
+      <a href="#searchBox" class="btn btn-outline" style="width: 100%; justify-content: center;">
+        <i data-lucide="search" style="width: 16px; height: 16px;"></i> Search Portal
+      </a>
+      <a href="#explore-platforms" class="btn btn-primary" style="width: 100%; justify-content: center;" data-i18n="nav_get_started">
+        Get Started
+      </a>
+    </div>
+  </aside>
+
+  <!-- =========================================================================
+       HERO SECTION (Centered Clean Editorial Hero - Nothing on Right Side)
+       ========================================================================= -->
+  <section class="hero-section" id="home">
+    <!-- Interactive Particle Constellation Canvas -->
+    <canvas id="heroParticlesCanvas" aria-hidden="true"></canvas>
+
+    <div class="hero-ambient-glow"></div>
+    <div class="hero-ambient-glow-2"></div>
+    
+    <div class="container hero-container-centered">
+      <div class="hero-content hero-content-centered">
+        <div class="badge badge-saffron floating-gentle">
+          <i data-lucide="sparkles" style="width: 14px; height: 14px;"></i>
+          <span data-i18n="badge_tagline">Unified Indian Citizen Knowledge Portal</span>
+        </div>
+
+        <h1 class="hero-headline hero-headline-centered">
+          <span class="title-word" data-i18n="hero_title_1">Your Rights.</span>
+          <span class="title-word highlight-royal" data-i18n="hero_title_2">Your Benefits.</span>
+          <span class="title-word highlight-saffron" data-i18n="hero_title_3">Your Future.</span>
+        </h1>
+
+        <p class="hero-description hero-description-centered" data-i18n="hero_desc">
+          Discover government opportunities, understand the laws that protect you, and take informed decisions with confidence.
+        </p>
+
+        <!-- CTA Buttons with Magnetic Physics -->
+        <div class="hero-cta-group hero-cta-centered">
+          <!-- Primary CTA: Explore Citizen Services -> SchemeSaarthi -->
+          <a href="#" data-platform="scheme" class="btn btn-royal magnetic-btn" data-i18n="hero_cta_schemes">
+            <span>Explore Citizen Services</span>
+            <i data-lucide="arrow-right" style="width: 18px; height: 18px;"></i>
+          </a>
+
+          <!-- Secondary CTA: Discover Your Rights -> LawSaarthi -->
+          <a href="#" data-platform="law" class="btn btn-outline magnetic-btn" data-i18n="hero_cta_laws">
+            <span>Discover Your Rights</span>
+            <i data-lucide="shield-check" style="width: 18px; height: 18px;"></i>
+          </a>
+        </div>
+
+        <!-- Trust Statement -->
+        <div class="hero-trust-badge">
+          <span class="ashoka-pulse"></span>
+          <span data-i18n="hero_trust">Knowledge empowers every citizen.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 6: EXPLORE OUR PLATFORMS
+       ========================================================================= -->
+  <section class="section platforms-section" id="explore-platforms">
+    <div class="container">
+      <div class="section-title-wrap">
+        <div class="badge badge-royal" data-i18n="platforms_badge">Two Dedicated Platforms</div>
+        <h2 class="section-title" data-i18n="platforms_title">One Platform. Two Powerful Destinations.</h2>
+        <p class="section-subtitle" data-i18n="platforms_subtitle">Choose what you want to discover today.</p>
+      </div>
+
+      <!-- Interactive Platform View Mode Switcher -->
+      <div style="text-align: center; margin-bottom: 40px;">
+        <div class="view-modes-control" role="group" aria-label="Platform View Modes">
+          <button type="button" class="view-mode-pill active" data-mode="both">
+            <i data-lucide="layout-grid" style="width: 15px; height: 15px;"></i> Compare Both
+          </button>
+          <button type="button" class="view-mode-pill" data-mode="scheme">
+            <i data-lucide="landmark" style="width: 15px; height: 15px;"></i> SchemeSaarthi Focus
+          </button>
+          <button type="button" class="view-mode-pill" data-mode="law">
+            <i data-lucide="scale" style="width: 15px; height: 15px;"></i> LawSaarthi Focus
+          </button>
+        </div>
+      </div>
+
+      <div class="platforms-grid">
+        <!-- CARD 1: SCHEMESAARTHI -->
+        <article class="platform-card platform-card-scheme tilt-card" id="schemeSaarthiCard">
+          <div class="card-glare" aria-hidden="true"></div>
+          <div>
+            <div class="card-header-badge">
+              <span class="platform-tag">Welfare & Schemes</span>
+              <div class="platform-icon-wrap pulse-blue" aria-hidden="true">
+                <i data-lucide="landmark" style="width: 26px; height: 26px;"></i>
+              </div>
+            </div>
+
+            <h3 class="platform-title" data-i18n="scheme_title">SchemeSaarthi</h3>
+            <p class="platform-subtitle" data-i18n="scheme_subtitle">Discover What You Are Eligible For.</p>
+            <p class="platform-desc" data-i18n="scheme_desc">
+              Find government schemes and benefits designed for you. Explore opportunities across education, employment, healthcare, agriculture, women empowerment, entrepreneurship and more.
+            </p>
+
+            <!-- Card Illustration -->
+            <div class="card-illustration-wrap">
+              <img src="assets/images/scheme-illustration.svg" alt="SchemeSaarthi Government Welfare Illustration" width="420" height="280" loading="lazy">
+            </div>
+
+            <!-- 5 Feature Highlights -->
+            <ul class="platform-features" aria-label="SchemeSaarthi Features">
+              <li class="platform-feature-item">
+                <i data-lucide="check-circle-2" class="feature-check-icon" style="width: 18px; height: 18px;"></i>
+                <span data-i18n="scheme_f1">Discover Central and State Government Schemes.</span>
+              </li>
+              <li class="platform-feature-item">
+                <i data-lucide="check-circle-2" class="feature-check-icon" style="width: 18px; height: 18px;"></i>
+                <span data-i18n="scheme_f2">Understand Eligibility Criteria.</span>
+              </li>
+              <li class="platform-feature-item">
+                <i data-lucide="check-circle-2" class="feature-check-icon" style="width: 18px; height: 18px;"></i>
+                <span data-i18n="scheme_f3">Explore Benefits and Financial Assistance.</span>
+              </li>
+              <li class="platform-feature-item">
+                <i data-lucide="check-circle-2" class="feature-check-icon" style="width: 18px; height: 18px;"></i>
+                <span data-i18n="scheme_f4">Learn How to Apply.</span>
+              </li>
+              <li class="platform-feature-item">
+                <i data-lucide="check-circle-2" class="feature-check-icon" style="width: 18px; height: 18px;"></i>
+                <span data-i18n="scheme_f5">Find Official Government Sources.</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Bottom Action Bar & CTA -->
+          <div class="card-action-bar">
+            <span class="url-preview" id="schemeUrlPreview">https://schemes.citizensaarthi.in</span>
+            <a href="#" data-platform="scheme" class="btn btn-royal magnetic-btn">
+              <span data-i18n="scheme_cta">Explore SchemeSaarthi</span>
+              <i data-lucide="arrow-right" style="width: 18px; height: 18px;"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- CARD 2: LAWSAARTHI -->
+        <article class="platform-card platform-card-law tilt-card" id="lawSaarthiCard">
+          <div class="card-glare" aria-hidden="true"></div>
+          <div>
+            <div class="card-header-badge">
+              <span class="platform-tag">Rights & Justice</span>
+              <div class="platform-icon-wrap pulse-saffron" aria-hidden="true">
+                <i data-lucide="scale" style="width: 26px; height: 26px;"></i>
+              </div>
+            </div>
+
+            <h3 class="platform-title" data-i18n="law_title">LawSaarthi</h3>
+            <p class="platform-subtitle" data-i18n="law_subtitle">Understand the Laws That Protect You.</p>
+            <p class="platform-desc" data-i18n="law_desc">
+              Explore Indian laws in simple language. Understand your rights, legal protections, responsibilities, complaint mechanisms and available remedies.
+            </p>
+
+            <!-- Card Illustration -->
+            <div class="card-illustration-wrap">
+              <img src="assets/images/law-illustration.svg" alt="LawSaarthi Legal Justice and Constitution Illustration" width="420" height="280" loading="lazy">
+            </div>
+
+            <!-- 5 Feature Highlights -->
+            <ul class="platform-features" aria-label="LawSaarthi Features">
+              <li class="platform-feature-item">
+                <i data-lucide="check-circle-2" class="feature-check-icon" style="width: 18px; height: 18px;"></i>
+                <span data-i18n="law_f1">Explore Indian Laws and Acts.</span>
+              </li>
+              <li class="platform-feature-item">
+                <i data-lucide="check-circle-2" class="feature-check-icon" style="width: 18px; height: 18px;"></i>
+                <span data-i18n="law_f2">Understand Fundamental and Legal Rights.</span>
+              </li>
+              <li class="platform-feature-item">
+                <i data-lucide="check-circle-2" class="feature-check-icon" style="width: 18px; height: 18px;"></i>
+                <span data-i18n="law_f3">Learn When a Law Applies.</span>
+              </li>
+              <li class="platform-feature-item">
+                <i data-lucide="check-circle-2" class="feature-check-icon" style="width: 18px; height: 18px;"></i>
+                <span data-i18n="law_f4">Discover Complaint Procedures.</span>
+              </li>
+              <li class="platform-feature-item">
+                <i data-lucide="check-circle-2" class="feature-check-icon" style="width: 18px; height: 18px;"></i>
+                <span data-i18n="law_f5">Find Official Legal Resources.</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Bottom Action Bar & CTA -->
+          <div class="card-action-bar">
+            <span class="url-preview" id="lawUrlPreview">https://laws.citizensaarthi.in</span>
+            <a href="#" data-platform="law" class="btn btn-gold magnetic-btn">
+              <span data-i18n="law_cta">Explore LawSaarthi</span>
+              <i data-lucide="arrow-right" style="width: 18px; height: 18px;"></i>
+            </a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 7: HOW CITIZEN SAARTHI HELPS YOU (3 STEPS)
+       ========================================================================= -->
+  <section class="section steps-section" id="how-it-works">
+    <div class="container">
+      <div class="section-title-wrap">
+        <div class="badge badge-saffron" data-i18n="how_badge">Simple 3-Step Journey</div>
+        <h2 class="section-title" data-i18n="how_title">How Citizen Saarthi Helps You</h2>
+        <p class="section-subtitle" data-i18n="how_subtitle">We eliminate bureaucratic complexity so every citizen can confidently access what is rightfully theirs.</p>
+      </div>
+
+      <div class="steps-container">
+        <div class="steps-connecting-line" aria-hidden="true"></div>
+
+        <!-- Step 1 -->
+        <div class="step-card tilt-card reveal-on-scroll">
+          <div class="step-number-wrap" data-i18n="step1_num">01</div>
+          <h3 class="step-title" data-i18n="step1_title">Discover</h3>
+          <p class="step-desc" data-i18n="step1_desc">Find relevant government schemes and legal information tailored to your profile and requirements.</p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="step-card tilt-card reveal-on-scroll">
+          <div class="step-number-wrap" data-i18n="step2_num">02</div>
+          <h3 class="step-title" data-i18n="step2_title">Understand</h3>
+          <p class="step-desc" data-i18n="step2_desc">Learn eligibility, rights, protections and procedures in simple, jargon-free citizen language.</p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="step-card tilt-card reveal-on-scroll">
+          <div class="step-number-wrap" data-i18n="step3_num">03</div>
+          <h3 class="step-title" data-i18n="step3_title">Take Action</h3>
+          <p class="step-desc" data-i18n="step3_desc">Visit official portals, understand next steps and make informed decisions with total clarity.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 8: WHY CITIZEN SAARTHI? (4 FEATURE CARDS)
+       ========================================================================= -->
+  <section class="section why-section">
+    <div class="container">
+      <div class="section-title-wrap">
+        <div class="badge badge-royal" data-i18n="why_badge">Built For 1.4 Billion Citizens</div>
+        <h2 class="section-title" data-i18n="why_title">Why Citizen Saarthi?</h2>
+        <p class="section-subtitle" data-i18n="why_subtitle">Designed from the ground up to solve information fragmentation and simplify governance.</p>
+      </div>
+
+      <div class="why-grid">
+        <!-- Feature 1 -->
+        <div class="why-card tilt-card reveal-on-scroll">
+          <div class="why-icon-box">
+            <i data-lucide="users" style="width: 28px; height: 28px;"></i>
+          </div>
+          <div class="why-content">
+            <h4 data-i18n="why1_title">Citizen First</h4>
+            <p data-i18n="why1_desc">Designed around the information citizens actually need, eliminating institutional jargon and complex bureaucratic layers.</p>
+          </div>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="why-card tilt-card reveal-on-scroll">
+          <div class="why-icon-box">
+            <i data-lucide="book-open" style="width: 28px; height: 28px;"></i>
+          </div>
+          <div class="why-content">
+            <h4 data-i18n="why2_title">Simple Explanations</h4>
+            <p data-i18n="why2_desc">Complex government notifications and legal acts decoded into plain, easy-to-understand language anyone can follow.</p>
+          </div>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="why-card tilt-card reveal-on-scroll">
+          <div class="why-icon-box">
+            <i data-lucide="badge-check" style="width: 28px; height: 28px;"></i>
+          </div>
+          <div class="why-content">
+            <h4 data-i18n="why3_title">Reliable Sources</h4>
+            <p data-i18n="why3_desc">Direct verification from official gazettes, ministries, and portals. No middlemen, misleading claims, or outdated forms.</p>
+          </div>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="why-card tilt-card reveal-on-scroll">
+          <div class="why-icon-box">
+            <i data-lucide="git-fork" style="width: 28px; height: 28px;"></i>
+          </div>
+          <div class="why-content">
+            <h4 data-i18n="why4_title">Two Independent Platforms</h4>
+            <p data-i18n="why4_desc">Welfare schemes and legal rights are deep domains. Each gets a dedicated, purpose-built platform linked through one unified entry point.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 9: INTERACTIVE SEARCH SECTION
+       ========================================================================= -->
+  <section class="section search-section" id="searchBox">
+    <div class="container container-narrow">
+      <div class="section-title-wrap">
+        <div class="badge badge-saffron" data-i18n="search_badge">Direct Unified Search</div>
+        <h2 class="section-title" data-i18n="search_title">What are you looking for today?</h2>
+        <p class="section-subtitle" data-i18n="search_subtitle">Instant search across all welfare schemes, citizen rights, legal acts, and civic benefits.</p>
+      </div>
+
+      <div class="search-box-card">
+        <!-- Selectable Categories -->
+        <div class="search-categories" role="tablist">
+          <button type="button" class="category-tab active" data-category="all" role="tab" data-i18n="tab_all">All Knowledge</button>
+          <button type="button" class="category-tab" data-category="schemes" role="tab" data-i18n="tab_schemes">Government Schemes</button>
+          <button type="button" class="category-tab" data-category="laws" role="tab" data-i18n="tab_laws">Laws & Rights</button>
+        </div>
+
+        <!-- Search Input Bar -->
+        <div class="search-input-wrapper">
+          <i data-lucide="search" class="search-icon-inside" style="width: 22px; height: 22px;"></i>
+          <input 
+            type="text" 
+            id="mainSearchInput" 
+            class="search-input-field" 
+            placeholder="Search schemes, rights, laws or government benefits..." 
+            data-i18n="search_placeholder"
+            autocomplete="off"
+          >
+          <button type="button" id="searchSubmitBtn" class="btn btn-royal search-submit-btn">
+            <span>Search</span>
+            <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
+          </button>
+        </div>
+
+        <!-- Quick Trending Suggestions Chips -->
+        <div class="search-chips-wrap">
+          <span class="search-chips-label">Popular Searches:</span>
+          <button type="button" class="search-chip" data-query="PM-Kisan">PM-Kisan</button>
+          <button type="button" class="search-chip" data-query="Ayushman Bharat">Ayushman Bharat</button>
+          <button type="button" class="search-chip" data-query="Right to Information (RTI)">RTI Act</button>
+          <button type="button" class="search-chip" data-query="Consumer Protection">Consumer Protection</button>
+          <button type="button" class="search-chip" data-query="Maternity Benefit">Maternity Benefit</button>
+          <button type="button" class="search-chip" data-query="Post-Matric Scholarship">Scholarships</button>
+        </div>
+
+        <!-- Live Instant Filtered Search Results Dropdown -->
+        <div class="search-results-panel" id="searchResultsPanel">
+          <div id="searchResultsList"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 10: CITIZEN AWARENESS SECTION
+       ========================================================================= -->
+  <section class="section awareness-section">
+    <div class="container">
+      <div class="section-title-wrap">
+        <div class="badge badge-royal" data-i18n="awareness_badge">Citizen Awareness</div>
+        <h2 class="section-title" data-i18n="awareness_title">An Informed Citizen Is an Empowered Citizen.</h2>
+        <p class="section-subtitle" data-i18n="awareness_subtitle">Knowledge is the greatest catalyst for social empowerment and democratic participation.</p>
+      </div>
+
+      <div class="awareness-grid">
+        <!-- Card 1: Know Your Government -->
+        <article class="awareness-card reveal-on-scroll">
+          <div class="awareness-img-wrap">
+            <img src="assets/images/awareness-government.svg" alt="Democratic Republic and Governance Illustration" width="320" height="200" loading="lazy">
+          </div>
+          <div class="awareness-body">
+            <h3 class="awareness-card-title" data-i18n="card1_title">Know Your Government</h3>
+            <p class="awareness-card-desc" data-i18n="card1_desc">
+              Understand how union, state and local Panchayati Raj institutions function, how policies are framed, and where public funds flow.
+            </p>
+            <a href="#" data-platform="scheme" class="awareness-read-more">
+              <span>Explore Governance Systems</span>
+              <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Card 2: Know Your Benefits -->
+        <article class="awareness-card reveal-on-scroll">
+          <div class="awareness-img-wrap">
+            <img src="assets/images/awareness-benefits.svg" alt="Public Welfare and Direct Benefit Transfer Illustration" width="320" height="200" loading="lazy">
+          </div>
+          <div class="awareness-body">
+            <h3 class="awareness-card-title" data-i18n="card2_title">Know Your Benefits</h3>
+            <p class="awareness-card-desc" data-i18n="card2_desc">
+              Discover direct benefit transfers (DBT), educational grants, healthcare subsidies, housing support, and rural development grants.
+            </p>
+            <a href="#" data-platform="scheme" class="awareness-read-more">
+              <span>Explore Citizen Benefits</span>
+              <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Card 3: Know Your Rights -->
+        <article class="awareness-card reveal-on-scroll">
+          <div class="awareness-img-wrap">
+            <img src="assets/images/awareness-rights.svg" alt="Fundamental Rights and Constitution of India Illustration" width="320" height="200" loading="lazy">
+          </div>
+          <div class="awareness-body">
+            <h3 class="awareness-card-title" data-i18n="card3_title">Know Your Rights</h3>
+            <p class="awareness-card-desc" data-i18n="card3_desc">
+              Master your Fundamental Rights, Right to Information (RTI), consumer rights, labor guarantees, and legal defense provisions.
+            </p>
+            <a href="#" data-platform="law" class="awareness-read-more">
+              <span>Explore Legal Protections</span>
+              <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i>
+            </a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 11: ABOUT SECTION
+       ========================================================================= -->
+  <section class="section about-section" id="about">
+    <div class="container">
+      <div class="about-card">
+        <div class="about-card-glow" aria-hidden="true"></div>
+        <div class="about-grid">
+          <div class="about-text-content">
+            <div class="badge badge-saffron" data-i18n="about_badge">Our Mission</div>
+            <h3 data-i18n="about_title">Making Government Knowledge Accessible to Everyone.</h3>
+            <p data-i18n="about_desc">
+              Citizen Saarthi aims to bridge the information gap between citizens and the systems designed to serve them. By connecting government schemes and legal awareness through two dedicated platforms, we want to make essential information easier to discover, understand and use.
+            </p>
+            <div class="about-quote-box" data-i18n="about_quote">
+              "Democracy flourishes when citizens are informed, aware, and empowered to participate."
+            </div>
+          </div>
+
+          <div class="about-stats">
+            <div class="stat-item tilt-card">
+              <div class="stat-number counting" data-counter="1200+">0+</div>
+              <div class="stat-label">Verified Government Schemes Indexed</div>
+            </div>
+            <div class="stat-item tilt-card">
+              <div class="stat-number counting" data-counter="500+">0+</div>
+              <div class="stat-label">Simplified Indian Legal Acts & Rights</div>
+            </div>
+            <div class="stat-item tilt-card">
+              <div class="stat-number counting" data-counter="28+8">0</div>
+              <div class="stat-label">States & Union Territories Covered</div>
+            </div>
+            <div class="stat-item tilt-card">
+              <div class="stat-number counting" data-counter="100%">0%</div>
+              <div class="stat-label">Independent & Free Citizen Access</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 12: FOOTER
+       ========================================================================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <!-- Col 1: Brand & Vision -->
+        <div class="footer-brand-col">
+          <div class="footer-logo">
+            <img src="assets/images/logo.svg" alt="Citizen Saarthi Logo" width="36" height="36">
+            <span class="brand-title" style="color: var(--color-white);">Citizen<span style="color: var(--color-saffron);">Saarthi</span></span>
+          </div>
+          <div class="footer-tagline-text" data-i18n="footer_tagline">Know Your Rights. Discover Your Opportunities.</div>
+          <p class="footer-desc" data-i18n="footer_statement">
+            Everything every Indian citizen should know about their rights, government benefits and opportunities — all in one place.
+          </p>
+        </div>
+
+        <!-- Col 2: SchemeSaarthi Links -->
+        <div class="footer-links-col">
+          <h4 class="footer-col-title" data-i18n="footer_schemes_col">SchemeSaarthi</h4>
+          <ul class="footer-links-list">
+            <li class="footer-link-item"><a href="#" data-platform="scheme">Central Government Schemes</a></li>
+            <li class="footer-link-item"><a href="#" data-platform="scheme">State Welfare Programs</a></li>
+            <li class="footer-link-item"><a href="#" data-platform="scheme">Agriculture & Farmers DBT</a></li>
+            <li class="footer-link-item"><a href="#" data-platform="scheme">Education & Scholarships</a></li>
+            <li class="footer-link-item"><a href="#" data-platform="scheme">Women & Child Welfare</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: LawSaarthi Links -->
+        <div class="footer-links-col">
+          <h4 class="footer-col-title" data-i18n="footer_laws_col">LawSaarthi</h4>
+          <ul class="footer-links-list">
+            <li class="footer-link-item"><a href="#" data-platform="law">Fundamental Constitutional Rights</a></li>
+            <li class="footer-link-item"><a href="#" data-platform="law">Right to Information (RTI)</a></li>
+            <li class="footer-link-item"><a href="#" data-platform="law">Consumer Protection Act</a></li>
+            <li class="footer-link-item"><a href="#" data-platform="law">NALSA Free Legal Aid</a></li>
+            <li class="footer-link-item"><a href="#" data-platform="law">Cyber & Digital Privacy Laws</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Official Resources -->
+        <div class="footer-links-col">
+          <h4 class="footer-col-title" data-i18n="footer_official">Official Portals</h4>
+          <div class="official-badge-list">
+            <a href="https://www.india.gov.in" target="_blank" rel="noopener noreferrer" class="official-portal-link">
+              <i data-lucide="external-link" style="width: 14px; height: 14px;"></i> National Portal of India (india.gov.in)
+            </a>
+            <a href="https://www.myscheme.gov.in" target="_blank" rel="noopener noreferrer" class="official-portal-link">
+              <i data-lucide="external-link" style="width: 14px; height: 14px;"></i> myScheme Portal (Official)
+            </a>
+            <a href="https://ecourts.gov.in" target="_blank" rel="noopener noreferrer" class="official-portal-link">
+              <i data-lucide="external-link" style="width: 14px; height: 14px;"></i> eCourts Services
+            </a>
+            <a href="https://nalsa.gov.in" target="_blank" rel="noopener noreferrer" class="official-portal-link">
+              <i data-lucide="external-link" style="width: 14px; height: 14px;"></i> National Legal Services (NALSA)
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Legal Disclaimer Box (Specified in Requirement 12) -->
+      <div class="footer-disclaimer-box" data-i18n="footer_disclaimer">
+        <strong>Disclaimer:</strong> Citizen Saarthi is an independent citizen-information platform. It is not an official government website and is not affiliated with any government authority. Users should verify scheme information and legal provisions through official sources.
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom">
+        <span data-i18n="footer_rights">© 2026 Citizen Saarthi. Built with dedication for the citizens of Bharat.</span>
+        
+        <div style="display: flex; gap: 16px; align-items: center;">
+          <a href="#about">About Us</a>
+          <span>•</span>
+          <a href="#explore-platforms">Platforms</a>
+          <span>•</span>
+          <button type="button" class="footer-dev-settings-btn" id="devSettingsBtn" title="Configure Local/Production Platform URLs">
+            <i data-lucide="settings" style="width: 12px; height: 12px;"></i> Dev Config
+          </button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       DEVELOPER SETTINGS MODAL (For Configurable URLs)
+       ========================================================================= -->
+  <div class="modal-backdrop" id="devSettingsModal" role="dialog" aria-modal="true" aria-labelledby="devModalTitle">
+    <div class="modal-window">
+      <div class="modal-header">
+        <h3 id="devModalTitle"><i data-lucide="sliders" style="width: 18px; height: 18px; vertical-align: middle;"></i> Platform URL Configuration</h3>
+        <button type="button" class="modal-close-btn" id="closeDevModalBtn" aria-label="Close modal">
+          <i data-lucide="x" style="width: 20px; height: 20px;"></i>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <p style="font-size: 0.875rem; color: var(--color-grey); margin-bottom: 16px;">
+          As required, platform URLs are centralized in <code>config.js</code>. You can dynamically adjust them here for localhost development or staging environments.
+        </p>
+
+        <div class="form-group">
+          <label for="devSchemeUrlInput" class="form-label">SchemeSaarthi Target URL</label>
+          <input type="url" id="devSchemeUrlInput" class="form-control" placeholder="https://schemes.citizensaarthi.in or http://localhost:3000">
+          <div class="form-hint">Default: <code>https://schemes.citizensaarthi.in</code></div>
+        </div>
+
+        <div class="form-group">
+          <label for="devLawUrlInput" class="form-label">LawSaarthi Target URL</label>
+          <input type="url" id="devLawUrlInput" class="form-control" placeholder="https://laws.citizensaarthi.in or http://localhost:3001">
+          <div class="form-hint">Default: <code>https://laws.citizensaarthi.in</code></div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline" id="resetDevSettingsBtn" style="padding: 8px 16px; font-size: 0.875rem;">Reset Defaults</button>
+        <button type="button" class="btn btn-outline" id="cancelDevModalBtn" style="padding: 8px 16px; font-size: 0.875rem;">Cancel</button>
+        <button type="button" class="btn btn-royal" id="saveDevSettingsBtn" style="padding: 8px 18px; font-size: 0.875rem;">Save & Apply</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="config.js"></script>
+  <script src="js/translations.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
+

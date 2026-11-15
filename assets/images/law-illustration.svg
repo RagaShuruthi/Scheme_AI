@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 280" fill="none">
+  <defs>
+    <linearGradient id="lawBg" x1="0" y1="0" x2="420" y2="280" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0E1D33"/>
+      <stop offset="100%" stop-color="#102B50"/>
+    </linearGradient>
+    <linearGradient id="lawGoldGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FCD34D"/>
+      <stop offset="50%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+    <linearGradient id="navyGlass" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1A3B68"/>
+      <stop offset="100%" stop-color="#132B4F"/>
+    </linearGradient>
+    <filter id="lawShadow" x="-10%" y="-10%" width="125%" height="125%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="420" height="280" rx="20" fill="url(#lawBg)"/>
+
+  <!-- Subtle Constellation / Legal Pillars background arcs -->
+  <circle cx="210" cy="140" r="130" stroke="#F59E0B" stroke-opacity="0.12" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <circle cx="210" cy="140" r="95" stroke="#FFFFFF" stroke-opacity="0.08" stroke-width="1"/>
+
+  <!-- Central Monumental Card: Constitution of India & Scales of Justice -->
+  <g transform="translate(70, 35)" filter="url(#lawShadow)">
+    <rect width="280" height="190" rx="16" fill="url(#navyGlass)" stroke="#F59E0B" stroke-opacity="0.3" stroke-width="1.5"/>
+
+    <!-- Pillar Columns (Greek / Ashokan Roman architectural motif of justice) -->
+    <rect x="25" y="45" width="8" height="90" rx="2" fill="#F59E0B" fill-opacity="0.15"/>
+    <rect x="247" y="45" width="8" height="90" rx="2" fill="#F59E0B" fill-opacity="0.15"/>
+
+    <!-- Constitution Emblem Top Ribbon -->
+    <g transform="translate(60, 20)">
+      <rect width="160" height="24" rx="12" fill="#0D1B2A" stroke="#F59E0B" stroke-opacity="0.4"/>
+      <text x="80" y="16" text-anchor="middle" font-family="serif" font-size="10" font-weight="700" letter-spacing="1.5" fill="url(#lawGoldGrad)">CONSTITUTION OF INDIA</text>
+    </g>
+
+    <!-- Balanced Scales of Justice Centerpiece -->
+    <g transform="translate(140, 58)">
+      <!-- Main Brass Pillar -->
+      <line x1="0" y1="0" x2="0" y2="70" stroke="url(#lawGoldGrad)" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="0" cy="0" r="4.5" fill="#FCD34D"/>
+      <!-- Balance Beam -->
+      <line x1="-50" y1="12" x2="50" y2="12" stroke="url(#lawGoldGrad)" stroke-width="2.5" stroke-linecap="round"/>
+      
+      <!-- Left Pan (Rights) -->
+      <line x1="-50" y1="12" x2="-62" y2="38" stroke="#FCD34D" stroke-width="1.5"/>
+      <line x1="-50" y1="12" x2="-38" y2="38" stroke="#FCD34D" stroke-width="1.5"/>
+      <path d="M-68 38 C-68 46 -32 46 -32 38 Z" fill="url(#lawGoldGrad)"/>
+
+      <!-- Right Pan (Remedies) -->
+      <line x1="50" y1="12" x2="38" y2="38" stroke="#FCD34D" stroke-width="1.5"/>
+      <line x1="50" y1="12" x2="62" y2="38" stroke="#FCD34D" stroke-width="1.5"/>
+      <path d="M32 38 C32 46 68 46 68 38 Z" fill="url(#lawGoldGrad)"/>
+
+      <!-- Base Plinth -->
+      <path d="M-22 70 L22 70 L16 64 L-16 64 Z" fill="url(#lawGoldGrad)"/>
+    </g>
+
+    <!-- Fundamental Rights Tag Chips -->
+    <g transform="translate(20, 145)">
+      <rect width="70" height="22" rx="6" fill="#0D1B2A" stroke="#F59E0B" stroke-opacity="0.3"/>
+      <text x="35" y="15" text-anchor="middle" font-family="system-ui" font-size="9" font-weight="600" fill="#FCD34D">RTI Act</text>
+    </g>
+    <g transform="translate(98, 145)">
+      <rect width="84" height="22" rx="6" fill="#0D1B2A" stroke="#F59E0B" stroke-opacity="0.3"/>
+      <text x="42" y="15" text-anchor="middle" font-family="system-ui" font-size="9" font-weight="600" fill="#FCD34D">Consumer Rights</text>
+    </g>
+    <g transform="translate(190, 145)">
+      <rect width="70" height="22" rx="6" fill="#0D1B2A" stroke="#F59E0B" stroke-opacity="0.3"/>
+      <text x="35" y="15" text-anchor="middle" font-family="system-ui" font-size="9" font-weight="600" fill="#FCD34D">Legal Aid</text>
+    </g>
+  </g>
+
+  <!-- Floating Legal Shield with Golden Gavel -->
+  <g transform="translate(35, 160)" filter="url(#lawShadow)">
+    <circle cx="24" cy="24" r="22" fill="#0D1B2A" stroke="#F59E0B" stroke-width="1.5"/>
+    <!-- Shield Outline -->
+    <path d="M24 14 L32 17 V24 C32 29 28 32 24 34 C20 32 16 29 16 24 V17 Z" fill="#F59E0B" fill-opacity="0.2" stroke="#F59E0B" stroke-width="1.5"/>
+    <circle cx="24" cy="23" r="2.5" fill="#FCD34D"/>
+  </g>
+
+  <!-- Floating Legal Remedy / Ashokan Pillar Lion Gavel Badge -->
+  <g transform="translate(330, 160)" filter="url(#lawShadow)">
+    <circle cx="24" cy="24" r="22" fill="#0D1B2A" stroke="#F59E0B" stroke-width="1.5"/>
+    <!-- Mini Gavel -->
+    <path d="M18 20 L24 14 L28 18 L22 24 Z" fill="url(#lawGoldGrad)"/>
+    <line x1="25" y1="21" x2="33" y2="29" stroke="#FCD34D" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+</svg>
