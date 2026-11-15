@@ -7,11 +7,11 @@
 const CITIZEN_CONFIG = {
   // Default target URLs for the two independent platforms
   SCHEME_SAARTHI_URL: "https://schemes.citizensaarthi.in",
-  LAW_SAARTHI_URL: "https://laws.citizensaarthi.in",
+  LAW_SAARTHI_URL: "http://127.0.0.1:8000",
 
   // Local development fallback URLs (uncomment or toggle via Dev Settings)
   DEV_SCHEME_SAARTHI_URL: "http://localhost:3000",
-  DEV_LAW_SAARTHI_URL: "http://localhost:3001",
+  DEV_LAW_SAARTHI_URL: "http://127.0.0.1:8000",
 
   // Whether to prioritize local URLs if running on localhost / 127.0.0.1
   AUTO_DETECT_LOCALHOST: true,
